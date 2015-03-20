@@ -138,6 +138,16 @@ module.exports = function (grunt) {
                 dest: bld
             }
         },
+	    connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    hostname: '127.0.0.1',
+                    base: '../public',
+		    keepalive: true
+                }
+            }
+        },
         requirejs: {
             compile: {
                 options: {
@@ -168,7 +178,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-
+    
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    
     grunt.loadNpmTasks('grunt-html2js');
 
     grunt.loadTasks('tasks');
