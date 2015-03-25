@@ -28,9 +28,10 @@ define([
         'ui.bootstrap',
         // App
         'app.auth',
-        'app.layout',
         'app.chat',
         'app.dashboard',
+        'app.setup',
+        'app.layout',
         'app.calendar',
         'app.inbox',
         'app.graphs',

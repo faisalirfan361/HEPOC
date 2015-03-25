@@ -153,6 +153,7 @@ if (appConfig.voice_command) {
      	appConfig.commands = {
                 
         'show dashboard' : function() { window.location.hash = "dashboard" },
+        'show setup' : function() { window.location.hash = "setup" },
         'show inbox' : function() {  window.location.hash = "inbox/" },
         'show graphs' : function() {  window.location.hash = "graphs/flot" },
         'show flotchart' : function() { window.location.hash = "graphs/flot" },

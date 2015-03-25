@@ -293,10 +293,24 @@
                 <a href="#"><i class="fa fa-lg fa-fw fa-comment-o"><em class="bg-color-pink flash animated">!</em></i> <span class="menu-item-parent">{{getWord('Smart Chat API')}} <sup>{{getWord('beta')}}</sup></span></a>
                 <div aside-chat-widget></div>
             </li>
-            
+
             <li data-ui-sref-active="active">
                 <a data-ui-sref="app.widgets" title="Widgets"><i class="fa fa-lg fa-fw fa-cog"></i><span
                         class="menu-item-parent">{{getWord('Setup')}}</span></a>
+                <ul>
+                    <li data-ui-sref-active="active">
+                        <a data-ui-sref="app.smartAdmin.diffVer"><i class="fa fa-stack-overflow"></i> {{getWord('Different Versions')}}</a>
+                    </li>
+                    <!--<li data-ui-sref-active="active">
+                        <a data-ui-sref="app.smartAdmin.appLayout"><i class="fa fa-cube"></i> {{getWord('App Settings')}}</a>
+                    </li>-->
+                    <li>
+                        <a href="http://bootstraphunter.com/smartadmin/BUGTRACK/track_/documentation/index.html" target="_blank"><i class="fa fa-book"></i> {{getWord('Documentation')}}</a>
+                    </li>
+                    <li>
+                        <a href="http://bootstraphunter.com/smartadmin/BUGTRACK/track_/" target="_blank"><i class="fa fa-bug"></i> {{getWord('Bug Tracker')}}</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>

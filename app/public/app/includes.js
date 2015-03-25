@@ -35,6 +35,9 @@ define([
     // dashboard
     'dashboard/module',
 
+    // Setup
+    'setup/module',
+
 
     //components
     'components/language/Language',

@@ -16792,3 +16792,9 @@ body.menu-on-top.fixed-header.fixed-navigation.fixed-ribbon #ribbon {
   border-radius: 3px;
   border: 1px solid #797979!important;
 }
+.hidden-menu-setup #left-panel {
+  display: none;
+}
+.hidden-menu-setup #main {
+  maring-left: 0;
+}

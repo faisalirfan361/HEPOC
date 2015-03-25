@@ -81,7 +81,8 @@ define([
             url: '/register',
             views: {
                 root: {
-                    templateUrl: 'app/auth/views/register.html'
+                    templateUrl: 'app/auth/views/register.html',
+
                 }
             },
             data: {
