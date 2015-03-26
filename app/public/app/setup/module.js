@@ -48,7 +48,12 @@ define([
                             'components/chat/directives/chatWidget',
                             'components/chat/directives/chatUsers',
                             'modules/graphs/directives/vectormap/vectorMap',
-                            'modules/graphs/directives/flot/flotBasic'
+                            'modules/graphs/directives/flot/flotBasic',
+                            'modules/forms/directives/validate/smartValidateForm',
+                            'modules/forms/directives/wizard/smartWizard',
+                            'modules/forms/directives/wizard/smartFueluxWizard',
+                            'modules/forms/directives/input/smartMaskedInput',
+                            'modules/forms/controllers/FormWizardCtrl'
                         ])
                     }
                 }
