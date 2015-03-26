@@ -24,7 +24,7 @@
     <div id="content" class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h1 class="txt-color-red login-header-big">Setup Happy Employee</h1>
+                <h1 class="text-happy login-header-big">Setup Happy Employee</h1>
 
                  
                 
@@ -54,9 +54,7 @@ data-widget-sortable="false"
 
 -->
 <header>
-
-    <h2>  </h2>
-
+    <h2> Please Configure Your Account </h2>
 </header>
 
 <!-- widget div-->
@@ -69,72 +67,165 @@ data-widget-sortable="false"
 <form novalidate="novalidate" data-smart-validate-form>
 <div class="col-sm-12" data-smart-wizard data-smart-wizard-callback="wizard1CompleteCallback">
 <div class="form-bootstrapWizard clearfix">
-    <ul class="bootstrapWizard">
+    <ul class="bootstrapWizard setupWizard">
         <li data-smart-wizard-tab="1" >
-            <a href="#" > <span class="step">1</span> <span class="title">Basic information</span>
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Budget</span>
             </a>
         </li>
         <li data-smart-wizard-tab="2" >
-            <a href="#" > <span class="step">2</span> <span class="title">Billing information</span> </a>
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Recognition & Appreciation</span> </a>
         </li>
         <li data-smart-wizard-tab="3">
-            <a href="#" > <span class="step">3</span> <span class="title">Domain Setup</span> </a>
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Redeem</span> </a>
         </li>
         <li data-smart-wizard-tab="4">
-            <a href="#" > <span class="step">4</span> <span class="title">Save Form</span> </a>
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Team</span> </a>
+        </li>
+        <li data-smart-wizard-tab="5">
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Branding</span> </a>
+        </li>
+        <li data-smart-wizard-tab="6">
+            <a href="#" > <span class="step">&nbsp;&nbsp;</span> <span class="title">Here You Go!</span> </a>
         </li>
     </ul>
 </div>
 <div class="tab-content">
 <div class="tab-pane" data-smart-wizard-pane="1" >
     <br>
+    <div class="col-sm-4 setup-container-bedget pull-right">
 
-    <h3><strong>Step 1 </strong> - Basic Information</h3>
-
-    <div class="row">
-
-        <div class="col-sm-12">
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
-                    <input class="form-control input-lg" placeholder="email@address.com" type="text" name="email"
-                           data-smart-validate-input
-                           data-required
-                           data-email
-                           data-message-required="We need your email address to contact you"
-                           data-message-email="Your email address must be in the format of name@domain.com">
-
+        <div class="well setup">
+            <div class="input-group col-sm-12">
+                 <div class="text-happy smaller-header text-center border-grey-bottom" >Estimated Annual Budget</div>
+                 <div class="budget-summary" >
+                    <div>
+                        <span>Recognition & appreciation</span>
+                        <span class="pull-right">$2000</span>
+                    </div>
+                    <div>
+                        <span>Motivation & Activities</span>
+                        <span class="pull-right">$1000</span>
+                    </div>
+                    <div>
+                        <span>Saying thanks rewards</span>
+                        <span class="pull-right">$1050</span>
+                    </div>
+                    <div>
+                        <span>Employee Survey Awards</span>
+                        <span class="pull-right">$250</span>
+                    </div>
+                </div>
+                <div class="border-grey-top">
+                    <div>
+                        <span>Per Person</span>
+                        <span class="pull-right">$2150</span>
+                    </div>
+                </div>
+                <div class="border-grey-top">
+                    <div>
+                        <span>Total</span>
+                        <span class="pull-right">$4300</span>
+                    </div>
                 </div>
             </div>
-
         </div>
 
+        
     </div>
+    <div class="col-sm-8 setup-container pull-left">
+        <h3><strong>Step 1 </strong> - Budget</h3>
+        <div>
+            <p class="text-happy med-header"><strong>Programs</strong></p>
+            <p><strong class="sml-header">Recognition & appreciation Budget:</strong><br/><span>Budget for Recognition & appreciation programs for overall organization, you can assign budget specific to teams as well during the setup under team setup section.<span></p>
+        </div> 
+        <div class="row">
 
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
-                    <input class="form-control input-lg" placeholder="First Name" type="text" name="fname"
-                           data-smart-validate-input
-                           data-required
-                           data-message="Please specify your First name">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa icon-dollar fa-lg fa-fw"></i></span>
+                        <input class="form-control input-lg" placeholder="Please Provide Budget in dollars" type="text" name="email"
+                               data-smart-validate-input
+                               data-required
+                               data-number
+                               data-message-required="We need budget for Recognition & appreciation"
+                               data-message-email="Please Provide Budget in dollars">
 
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <p><strong class="sml-header">Motivation Activities Budget:</strong><br/><span>Budget for Motivation Activities for overall organization, you can assign budget specific to teams as well during the setup under team setup section.<span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa icon-dollar fa-lg fa-fw"></i></span>
+                        <input class="form-control input-lg" placeholder="Please Provide Budget in dollars" type="text" name="email"
+                               data-smart-validate-input
+                               data-required
+                               data-email
+                               data-message-required="We need Motivation Activities Budget"
+                               data-message-email="Please Provide Budget in dollars">
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
-                    <input class="form-control input-lg" placeholder="Last Name" type="text" name="lname"
-                           data-smart-validate-input data-required
-                           data-message="Please specify your Last name">
 
+
+        <div>
+            <p class="txt-color-red med-header"><strong>Incentives</strong></p>
+            <p><strong class="sml-header">Saying thanks rewards budget:</strong><br/><span>Do you want your employees to get rewarded when saying thanks to their colleagues<span></p>
+        </div> 
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa icon-dollar fa-lg fa-fw"></i></span>
+                        <input class="form-control input-lg" placeholder="Please Provide Budget in dollars" type="text" name="email"
+                               data-smart-validate-input
+                               data-required
+                               data-number
+                               data-message-required="We need budget for Recognition & appreciation"
+                               data-message-email="Please Provide Budget in dollars">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <p><strong class="sml-header">Employee Survey Awards:</strong><br/><span>How much points/cash for each employee survey for review and feedback, please set to 0 if you do not want it to be paid.<span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa icon-dollar fa-lg fa-fw"></i></span>
+                        <input class="form-control input-lg" placeholder="Please Provide Budget in dollars" type="text" name="email"
+                               data-smart-validate-input
+                               data-required
+                               data-email
+                               data-message-required="We need Motivation Activities Budget"
+                               data-message-email="Please Provide Budget in dollars">
+
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
 </div>
@@ -473,6 +564,28 @@ data-widget-sortable="false"
     </div>
 </div>
 <div class="tab-pane" data-smart-wizard-pane="4" >
+    <br>
+
+    <h3><strong>Step 4</strong> - Save Form</h3>
+    <br>
+
+    <h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Complete</strong></h1>
+    <h4 class="text-center">Click next to finish</h4>
+    <br>
+    <br>
+</div>
+<div class="tab-pane" data-smart-wizard-pane="5" >
+    <br>
+
+    <h3><strong>Step 4</strong> - Save Form</h3>
+    <br>
+
+    <h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Complete</strong></h1>
+    <h4 class="text-center">Click next to finish</h4>
+    <br>
+    <br>
+</div>
+<div class="tab-pane" data-smart-wizard-pane="6" >
     <br>
 
     <h3><strong>Step 4</strong> - Save Form</h3>
