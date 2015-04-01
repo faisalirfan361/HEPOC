@@ -234,33 +234,7 @@ data-widget-sortable="false"
 
     <h3><strong>Step 2</strong> - Recognition & Appreciation</h3>
 
-    <div class="row">
-        <div class="col-12">
-            
-                <!-- widget content -->
-            <div class="smart-form">
-                <fieldset>
-                    <div class="row">
-                        <section class="col col-sm-12">
-                            <label class="label col">Select activities for program: </label>
-                            <label class="toggle col col-sm-3">
-                                <input type="checkbox" name="checkbox-toggle" checked="checked">
-                                <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EAward Nomination</label>
-                            <label class="toggle col"></label>
-                            <label class="toggle col col-sm-2">
-                                <input type="checkbox" name="checkbox-toggle" checked="checked">
-                                <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EThanks</label>
-                            <label class="toggle col"></label>
-                            <label class="toggle col col-sm-2">
-                                <input type="checkbox" name="checkbox-toggle" checked="checked">
-                                <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EBadges</label>
-                        </section>
-                    </div>
-                </fieldset>
-            </div>
-        </div>
-    </div>
-
+   
     <div class="row">
         <div class="col-12">
             <div class="smart-form">
@@ -278,7 +252,7 @@ data-widget-sortable="false"
                                 <div class="row">
                                     <section class="input-group col col-sm-12">
                                         <span class="input-group-addon"><i class="fa fa-ge fa-lg"></i></span>
-                                        <input class="form-control input-sm" placeholder="Enter Program Name" type="text" name="text"
+                                        <input ng-model="programNameText" class="form-control input-sm" placeholder="Enter Program Name" type="text" name="text"
                                                data-smart-validate-input
                                            data-required
                                            data-text
@@ -288,39 +262,45 @@ data-widget-sortable="false"
                                                                    
                                         <label class="input-group-addon">
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;
-                                            <select class="">
-                                                <option value="0">Choose Program</option>
-                                                <option value="1">Awesomeness</option>
-                                                <option value="2">Appriciate Great Work</option>
-                                                <option value="3">Wellness</option>
-                                                <option value="4">Proffesionalism</option>
-                                                <option value="5">Career Achievement</option>
-                                                <option value="6">Special Thanks</option>
-                                                <option value="7">Celebrate Milestones</option>
-                                                <option value="8">Appriciate Efforts</option>
-                                                <option value="9">Celebrate Excellence</option>
-                                            </select> <i></i> </label>
+                                            <select ng-model="programNameSelect" ng-options="item.ID as item.Title for item in programItems"></select>
+                                        <i></i> </label>
+                                    </section>
+                                </div>
+                                <div class="row col">
+                                    <section class="col col-sm-6">
+                                        <strong>Select activities for program:</strong>
+                                        <label class="toggle">
+                                            <input type="checkbox" ng-model="activityNomination" name="checkbox-toggle">
+                                            <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EAward Nomination</label>
+                                        
+                                        <label class="toggle">
+                                            <input type="checkbox" ng-model="activityThanks" name="checkbox-toggle">
+                                            <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EThanks</label>
+                                        
+                                        <label class="toggle">
+                                            <input type="checkbox" ng-model="activityBage" name="checkbox-toggle">
+                                            <i data-swchon-text="ON" data-swchoff-text="OFF"></i>EBadges</label>
                                     </section>
 
+                                    <section class="col col-sm-6">
+                                        <strong>Select program Icon:</strong>
+                                        <input id="exampleInputFile1" class="btn-sm" type="file">                            
+                                    </section>
                                 </div>
                                 <div class="row">
                                     <section class="input-group col col-sm-12">
                                         <label class="textarea">
-                                            <textarea rows="2" class="custom-scroll" placeholder="Description"></textarea>
+                                            <textarea ng-model="programDescription" rows="2" class="custom-scroll" placeholder="Description"></textarea>
                                         </label>
                                     </section>                                    
 
                                 </div>
-                                <div class="row">
-                                    <section class="col col-sm-12">
-                                        <input id="exampleInputFile1" class="btn btn-sm" type="file">                            
-                                    </section>
-                                </div>
+                                
                                 <div></div>
 
                                 <div class="row">
                                     <section class="col col-sm-12">
-                                        <a class="btn btn-sm btn-primary" href-void="" href="#">Add Program</a>
+                                        <a class="btn btn-sm btn-primary" href-void="" ng-click="addProgram()">Add Program</a>
 
                                     </section>
                                 </div>
@@ -345,10 +325,10 @@ data-widget-sortable="false"
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Mark</td>
-                                                <td>This is a dummy text to show description size.</td>
+                                            <tr ng-repeat="program in programs">
+                                                <td>{{program.ID}}</td>
+                                                <td>{{program.Name}}</td>
+                                                <td>{{program.Description}}</td>
                                                 <td>
                                                     <a class="btn btn-labeled btn-sm  btn-default" href-void="" href="#">
                                                     <span class="btn-label">
@@ -358,19 +338,7 @@ data-widget-sortable="false"
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>
-                                                    <a class="btn btn-labeled btn-sm  btn-default" href-void="" href="#">
-                                                    <span class="btn-label">
-                                                    <i class="glyphicon glyphicon-plus-sign"></i>
-                                                    </span>
-                                                    Add Sub Category
-                                                    </a>
-                                                </td>
-                                            </tr>                                            
+                                                                                    
                                             </tbody>
                                         </table>
 

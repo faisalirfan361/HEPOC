@@ -26,6 +26,63 @@ define(['setup/module', 'lodash'], function (module, _) {
             ])
         }
 
+        //this is a recogniation page model 
+        $scope.programNameText = '';
+        $scope.programNameSelect = '';
+
+        // this is a dummy program list for select box at recognition page
+        $scope.programItems = [
+           {ID: '000001', Title: 'Choose Program'},
+           {ID: '000002', Title: 'Awesomeness'},
+           {ID: '000003', Title: 'Appriciate Great Work'},
+           {ID: '000002', Title: 'Awesomeness'},
+           {ID: '000002', Title: 'Wellness'},
+           {ID: '000002', Title: 'Proffesionalism'},
+           {ID: '000002', Title: 'Career Achievement'},
+           {ID: '000002', Title: 'Special Thanks'},
+           {ID: '000002', Title: 'Celebrate Milestones'},
+           {ID: '000002', Title: 'Appriciate Efforts'},
+           {ID: '000002', Title: 'Celebrate Excellence'}
+        ];
+        $scope.activityBage = true;
+        $scope.activityThanks = true;
+        $scope.activityNomination = true;
+        $scope.programDescription = '';
+
+        // this is a dummy programs , which is currently shown in table at recogniation page 
+        $scope.programs = [           
+           {ID: '1', Name: 'Awesomeness', Description: 'This is a dummy text to show description size.'},
+           {ID: '2', Name: 'Appriciate Great Work', Description: 'This is a dummy text to show description size.'},
+           {ID: '3', Name: 'Awesomeness', Description: 'This is a dummy text to show description size.'},
+           {ID: '4', Name: 'Wellness', Description: 'This is a dummy text to show description size.'},
+           {ID: '5', Name: 'Proffesionalism', Description: 'This is a dummy text to show description size.'}
+        ];
+
+        // it will be called from add program button, it consider model is already populated.
+        $scope.addProgram = function() {
+            var dump = ' programNameText: ' + $scope.programNameText;
+            dump += ', programNameSelect: '+$scope.programNameSelect;
+            dump += ', activityBage: '+$scope.activityBage;
+            dump += ', activityThanks: '+$scope.activityBage;
+            dump += ', activityNomination: '+$scope.activityBage;
+            dump += ', programDescription: '+$scope.programDescription;
+            console.log(dump);
+
+            // it checks if user enter names is empty then go for selected
+            if ($scope.programNameText === '')
+                angular.forEach($scope.programItems, function(value, key) {
+                    if (value.ID === $scope.programNameSelect)
+                        $scope.programNameText = value.Title;
+                });
+            //it checks if user have even not select nor enter name
+            if ($scope.programNameText.trim() !== '') {
+                var newItem = {ID: $scope.programs.length+1, Name: $scope.programNameText, Description: $scope.programDescription};
+
+                //new item will be directly push to programs array, as angular will update it on view
+                $scope.programs.push(newItem);
+            }
+        };
+
         $scope.autoUpdate = false;
 
         var updateInterval;
