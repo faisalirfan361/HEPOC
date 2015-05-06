@@ -62,3 +62,77 @@
 .border-grey-bottom{
 	border-bottom: 1px solid #ccc;
 }
+.node {
+  cursor: pointer;
+}
+
+.overlay{
+    background-color:#fff;
+}
+ 
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+ 
+.node text {
+  font-size:10px; 
+  font-family:sans-serif;
+}
+ 
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.templink {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+.ghostCircle.show{
+    display:block;
+}
+
+.ghostCircle, .activeDrag .ghostCircle{
+     display: none;
+}
+.popover {
+	max-width:400px;
+}
+#popover-content table {
+  min-width: 370px;
+  line-height: 36px;
+}
+.smallThumb{
+  width: 80px;
+}
+.popover-content th{
+  width: 80px;
+  padding-right: 20px;
+  font-weight: bold;
+  color: #a90329;
+  font-size: 14px;
+  padding-left: 20px;
+  max-width: 386px;
+}
+.popover{
+  max-width: 409px !important;
+}
+td {
+  text-align: center;
+  font-weight: bold;
+}
+th.profileIcon{
+  padding-left: 0;
+  padding-right: 0px;
+  width: 52px;
+}
+.closePopUp{
+  float: right;
+  cursor: pointer;
+  font-size: 11px;
+}

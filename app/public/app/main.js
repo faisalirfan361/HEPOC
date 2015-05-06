@@ -11,7 +11,10 @@ define([
     'bootstrap',
     'appConfig',
     'app',
-    'includes'
+    'includes',
+    'd3js',
+    'dndTree',
+    'contextMenu'
 ], function (require, $, ng, domReady) {
     'use strict';
 

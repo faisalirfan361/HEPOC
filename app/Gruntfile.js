@@ -10,8 +10,8 @@ module.exports = function(grunt) {
   // DEFINE DIRECTORY FOR SMARTADMIN VERSION HERE
   var globalConfig = {
     src: 'COMMON_ASSETS',
-    dest: 'public/styles' // PHP_version/PHP_AJAX_Version | PHP_version/PHP_HTML_version | HTML_version | AJAX_version |
-                         // NOTE: A different grunt.js file is used for the AngularJS_version
+    dest: 'public/styles', // PHP_version/PHP_AJAX_Version | PHP_version/PHP_HTML_version | HTML_version | AJAX_version |
+    jsdest: 'public'                        // NOTE: A different grunt.js file is used for the AngularJS_version
   };
     
   // DEFINE 	  
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         files: [{
             expand: true,
             src: ['**/*.js', '!**/*.min.js', '!**/*.backup.js'],
-            dest: '<%= globalConfig.dest %>/js/',
+            dest: '<%= globalConfig.jsdest %>/',
             cwd: '<%= globalConfig.src %>/UNMINIFIED_JS/',
             extDot: 'last',
             ext: '.min.js'
@@ -71,8 +71,12 @@ module.exports = function(grunt) {
       }
     },
 
-	// SASS FILE COMPILATION
-	'sass': {
+'copy':{
+    src: ['**/flare.json'],
+    dest: '<%= globalConfig.jsdest %>/'
+},	
+
+    'sass': {
 	  development: {
 	    options: {
 	      banner: '<%= banner %>'
@@ -127,10 +131,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');  
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');  
+  grunt.loadNpmTasks('grunt-contrib-watch');
+ grunt.loadNpmTasks('grunt-contrib-copy');  
 
   grunt.registerTask('dist-test', ['jshint']);
-  grunt.registerTask('default', ['uglify', 'less','cssmin']);
+  grunt.registerTask('default', ['copy', 'uglify', 'less','cssmin']);
   grunt.registerTask('dist-less', ['less','cssmin']);
   grunt.registerTask('dist-sass', ['sass','cssmin']);
   grunt.registerTask('dist-js', ['uglify']);

@@ -15,8 +15,10 @@ var require = {
         'angular-resource': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-resource.min',
         'angular-sanitize': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min',
         'angular-animate': '//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.min',
-
-
+       
+        'd3js': 'http://d3js.org/d3.v3.min',
+        'dndTree': '../plugin/dndTree/dndTree.min',
+        'contextMenu': '../plugin/contextMenu/jquery.contextMenu.min',
         'domReady': '../plugin/requirejs-domready/domReady',
 
         'angular-ui-router': '../plugin/angular-ui-router/release/angular-ui-router.min',
@@ -186,6 +188,8 @@ var require = {
         'jquery-validation':{deps: ['jquery']},
         'jquery-form':{deps: ['jquery']},
         'jquery-color':{deps: ['jquery']},
+        'dndTree':{deps: ['d3js', 'jquery']},
+        'contextMenu':{deps: ['jquery']},
 
         'jcrop':{deps: ['jquery-color']},
 

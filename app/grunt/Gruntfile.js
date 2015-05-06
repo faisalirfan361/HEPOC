@@ -131,6 +131,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: tmp,
                 src: [
+                    '*/*.json',
                     '*/**',
                     'rconfig.js',
                     '!**/*.tpl.html'
