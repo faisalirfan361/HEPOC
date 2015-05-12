@@ -136,3 +136,65 @@ th.profileIcon{
   cursor: pointer;
   font-size: 11px;
 }
+.outer{
+        width:1106px;
+        margin:0;
+    }
+ 
+    .outer .wrap {
+  overflow: auto;
+  white-space: nowrap;
+  width: 1106px;
+}
+    ul.overfllow {
+    list-style:none;padding:5px;
+      float: left;
+      list-style: outside none none;
+      overflow: hidden;
+      padding: 5px;
+      width: 5300px;
+    }
+
+    .wrap li {
+        margin:0 10px;
+        display:inline;
+        float:left;
+    }
+    .left{
+        float:left;
+        clear:both;
+    }
+    .right{
+        float:right;
+    }
+    .name-radio-wrap{
+    }
+    .box {
+    border: 1px solid silver;
+    margin: 2px;
+    padding: 23px;
+}
+.box a{
+    float: left;
+    padding: 6px;
+    width: 200px;
+    text-decoration: none;
+}
+.box .image-wrap{
+    padding:15px;
+}
+.image-wrap img{
+    border: 1px solid #C0C0C0;
+}
+.box .toggle{
+    top:-9px;
+    right:93px;
+}
+.left-margin-10{
+    margin-left: 10px
+}
+.box .toggle input {
+    position: relative;
+    left: 150px;
+    display: none;
+}

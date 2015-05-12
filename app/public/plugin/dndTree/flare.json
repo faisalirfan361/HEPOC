@@ -1,0 +1,30 @@
+{
+    "displayname": "Brandon Foresbergh",
+    "fullname": "Brandon Foresbergh",
+    "title": "CEO",
+    "children": [{
+        "displayname": "Ben W.",
+        "fullname": "Benjamin Walmer",
+        "title": "VP Engineering",
+        "children": [{
+            "displayname": "Pete Lasko",
+            "fullname": "Pete Lasko",
+            "title": "Product Manager",
+            "children": [ ]
+        }, {
+            "displayname": "Jason Smith",
+            "fullname": "Jason Smith",
+            "title": "Product Manager",
+            "children": [ ]
+        }, {
+            "displayname": "Melissa Lasko",
+            "fullname": "Melissa Lasko",
+            "title": "Product Manager",
+            "children": [{
+                "displayname": "Chris Phillips",
+                "title": "Project Manager",
+                "size": 7074
+            }]
+        }]
+    }]
+}

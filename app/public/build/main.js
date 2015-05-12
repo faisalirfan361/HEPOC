@@ -329,7 +329,591 @@ a.put("build/layout/directives/demo/demo-states.tpl.html",'<div class="demo"><sp
 a.put("build/layout/partials/sub-header.tpl.html",'<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8" data-sparkline-container>\n    <ul id="sparks" class="">\n        <li class="sparks-info">\n            <h5> My Income <span class="txt-color-blue">$47,171</span></h5>\n            <div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">\n                1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471\n            </div>\n        </li>\n        <li class="sparks-info">\n            <h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>\n            <div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">\n                110,150,300,130,400,240,220,310,220,300, 270, 210\n            </div>\n        </li>\n        <li class="sparks-info">\n            <h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>\n            <div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">\n                110,150,300,130,400,240,220,310,220,300, 270, 210\n            </div>\n        </li>\n    </ul>\n</div>\n			'),a.put("build/layout/partials/voice-commands.tpl.html",'<!-- TRIGGER BUTTON:\n<a href="/my-ajax-page.html" data-toggle="modal" data-target="#remoteModal" class="btn btn-default">Open Modal</a>  -->\n\n<!-- MODAL PLACE HOLDER\n<div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-labelledby="remoteModalLabel" aria-hidden="true">\n<div class="modal-dialog">\n<div class="modal-content"></div>\n</div>\n</div>   -->\n<!--////////////////////////////////////-->\n\n<!--<div class="modal-header">\n<button type="button" class="close" data-dismiss="modal" aria-hidden="true">\n&times;\n</button>\n<h4 class="modal-title" id="myModalLabel">Command List</h4>\n</div>-->\n<div class="modal-body">\n\n	<h1><i class="fa fa-microphone text-muted"></i>&nbsp;&nbsp; SmartAdmin Voice Command</h1>\n	<hr class="simple">\n	<h5>Instruction</h5>\n\n	Click <span class="text-success">"Allow"</span> to access your microphone and activate Voice Command.\n	You will notice a <span class="text-primary"><strong>BLUE</strong> Flash</span> on the microphone icon indicating activation.\n	The icon will appear <span class="text-danger"><strong>RED</strong></span> <span class="label label-danger"><i class="fa fa-microphone fa-lg"></i></span> if you <span class="text-danger">"Deny"</span> access or don\'t have any microphone installed.\n	<br>\n	<br>\n	As a security precaution, your browser will disconnect the microphone every 60 to 120 seconds (sooner if not being used). In which case Voice Command will prompt you again to <span class="text-success">"Allow"</span> or <span class="text-danger">"Deny"</span> access to your microphone.\n	<br>\n	<br>\n	If you host your page over <strong>http<span class="text-success">s</span></strong> (secure socket layer) protocol you can wave this security measure and have an unintrupted Voice Command.\n	<br>\n	<br>\n	<h5>Commands</h5>\n	<ul>\n		<li>\n			<strong>\'show\' </strong> then say the <strong>*page*</strong> you want to go to. For example <strong>"show inbox"</strong> or <strong>"show calendar"</strong>\n		</li>\n		<li>\n			<strong>\'mute\' </strong> - mutes all sound effects for the theme.\n		</li>\n		<li>\n			<strong>\'sound on\'</strong> - unmutes all sound effects for the theme.\n		</li>\n		<li>\n			<span class="text-danger"><strong>\'stop\'</strong></span> - deactivates voice command.\n		</li>\n		<li>\n			<span class="text-primary"><strong>\'help\'</strong></span> - brings up the command list\n		</li>\n		<li>\n			<span class="text-danger"><strong>\'got it\'</strong></span> - closes help modal\n		</li>\n		<li>\n			<strong>\'hide navigation\'</strong> - toggle navigation collapse\n		</li>\n		<li>\n			<strong>\'show navigation\'</strong> - toggle navigation to open (can be used again to close)\n		</li>\n		<li>\n			<strong>\'scroll up\'</strong> - scrolls to the top of the page\n		</li>\n		<li>\n			<strong>\'scroll down\'</strong> - scrollts to the bottom of the page\n		</li>\n		<li>\n			<strong>\'go back\' </strong> - goes back in history (history -1 click)\n		</li>\n		<li>\n			<strong>\'logout\'</strong> - logs you out\n		</li>\n	</ul>\n	<br>\n	<h5>Adding your own commands</h5>\n	Voice Command supports up to 80 languages. Adding your own commands is extreamly easy. All commands are stored inside <strong>app.config.js</strong> file under the <code>var commands = {...}</code>. \n\n	<hr class="simple">\n	<div class="text-right">\n		<button type="button" class="btn btn-success btn-lg" data-dismiss="modal">\n			Got it!\n		</button>\n	</div>\n\n</div>\n<!--<div class="modal-footer">\n<button type="button" class="btn btn-primary" data-dismiss="modal">Got it!</button>\n</div> -->'),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-attribute-form.tpl.html",'<form id="attributeForm" class="form-horizontal"\n      data-bv-message="This value is not valid"\n      data-bv-feedbackicons-valid="glyphicon glyphicon-ok"\n      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"\n      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">\n\n    <fieldset>\n        <legend>\n            Set validator options via HTML attributes\n        </legend>\n\n        <div class="alert alert-warning">\n            <code>&lt; input\n                data-bv-validatorname\n                data-bv-validatorname-validatoroption="..." / &gt;</code>\n\n            <br>\n            <br>\n            More validator options can be found here:\n            <a href="http://bootstrapvalidator.com/validators/" target="_blank">http://bootstrapvalidator.com/validators/</a>\n        </div>\n\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Full name</label>\n            <div class="col-lg-4">\n                <input type="text" class="form-control" name="firstName" placeholder="First name"\n                       data-bv-notempty="true"\n                       data-bv-notempty-message="The first name is required and cannot be empty" />\n            </div>\n            <div class="col-lg-4">\n                <input type="text" class="form-control" name="lastName" placeholder="Last name"\n                       data-bv-notempty="true"\n                       data-bv-notempty-message="The last name is required and cannot be empty" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Username</label>\n            <div class="col-lg-5">\n                <input type="text" class="form-control" name="username"\n                       data-bv-message="The username is not valid"\n\n                       data-bv-notempty="true"\n                       data-bv-notempty-message="The username is required and cannot be empty"\n\n                       data-bv-regexp="true"\n                       data-bv-regexp-regexp="^[a-zA-Z0-9_\\.]+$"\n                       data-bv-regexp-message="The username can only consist of alphabetical, number, dot and underscore"\n\n                       data-bv-stringlength="true"\n                       data-bv-stringlength-min="6"\n                       data-bv-stringlength-max="30"\n                       data-bv-stringlength-message="The username must be more than 6 and less than 30 characters long"\n\n                       data-bv-different="true"\n                       data-bv-different-field="password"\n                       data-bv-different-message="The username and password cannot be the same as each other" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Email address</label>\n            <div class="col-lg-5">\n                <input class="form-control" name="email" type="email"\n                       data-bv-emailaddress="true"\n                       data-bv-emailaddress-message="The input is not a valid email address" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Password</label>\n            <div class="col-lg-5">\n                <input type="password" class="form-control" name="password"\n                       data-bv-notempty="true"\n                       data-bv-notempty-message="The password is required and cannot be empty"\n\n                       data-bv-identical="true"\n                       data-bv-identical-field="confirmPassword"\n                       data-bv-identical-message="The password and its confirm are not the same"\n\n                       data-bv-different="true"\n                       data-bv-different-field="username"\n                       data-bv-different-message="The password cannot be the same as username" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Retype password</label>\n            <div class="col-lg-5">\n                <input type="password" class="form-control" name="confirmPassword"\n                       data-bv-notempty="true"\n                       data-bv-notempty-message="The confirm password is required and cannot be empty"\n\n                       data-bv-identical="true"\n                       data-bv-identical-field="password"\n                       data-bv-identical-message="The password and its confirm are not the same"\n\n                       data-bv-different="true"\n                       data-bv-different-field="username"\n                       data-bv-different-message="The password cannot be the same as username" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Languages</label>\n            <div class="col-lg-5">\n                <div class="checkbox">\n                    <label>\n                        <input type="checkbox" name="languages[]" value="english"\n                               data-bv-message="Please specify at least one language you can speak"\n                               data-bv-notempty="true" />\n                        English </label>\n                </div>\n                <div class="checkbox">\n                    <label>\n                        <input type="checkbox" name="languages[]" value="french" />\n                        French </label>\n                </div>\n                <div class="checkbox">\n                    <label>\n                        <input type="checkbox" name="languages[]" value="german" />\n                        German </label>\n                </div>\n                <div class="checkbox">\n                    <label>\n                        <input type="checkbox" name="languages[]" value="russian" />\n                        Russian </label>\n                </div>\n                <div class="checkbox">\n                    <label>\n                        <input type="checkbox" name="languages[]" value="other" />\n                        Other </label>\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n\n</form>\n     '),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-button-group-form.tpl.html",'<form id="buttonGroupForm" method="post" class="form-horizontal">\n\n    <fieldset>\n        <legend>\n            Default Form Elements\n        </legend>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Gender</label>\n            <div class="col-lg-9">\n                <div class="btn-group" data-toggle="buttons">\n                    <label class="btn btn-default">\n                        <input type="radio" name="gender" value="male" />\n                        Male </label>\n                    <label class="btn btn-default">\n                        <input type="radio" name="gender" value="female" />\n                        Female </label>\n                    <label class="btn btn-default">\n                        <input type="radio" name="gender" value="other" />\n                        Other </label>\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Languages</label>\n            <div class="col-lg-9">\n                <div class="btn-group" data-toggle="buttons">\n                    <label class="btn btn-default">\n                        <input type="checkbox" name="languages[]" value="english" />\n                        English </label>\n                    <label class="btn btn-default">\n                        <input type="checkbox" name="languages[]" value="german" />\n                        German </label>\n                    <label class="btn btn-default">\n                        <input type="checkbox" name="languages[]" value="french" />\n                        French </label>\n                    <label class="btn btn-default">\n                        <input type="checkbox" name="languages[]" value="russian" />\n                        Russian </label>\n                    <label class="btn btn-default">\n                        <input type="checkbox" name="languages[]" value="italian">\n                        Italian </label>\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n\n</form>\n'),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-contact-form.tpl.html",'<form id="contactForm" method="post" class="form-horizontal">\n\n    <fieldset>\n        <legend>Showing messages in custom area</legend>\n        <div class="form-group">\n            <label class="col-md-3 control-label">Full name</label>\n            <div class="col-md-6">\n                <input type="text" class="form-control" name="fullName" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-md-3 control-label">Email</label>\n            <div class="col-md-6">\n                <input type="text" class="form-control" name="email" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-md-3 control-label">Title</label>\n            <div class="col-md-6">\n                <input type="text" class="form-control" name="title" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-md-3 control-label">Content</label>\n            <div class="col-md-6">\n                <textarea class="form-control" name="content" rows="5"></textarea>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <!-- #messages is where the messages are placed inside -->\n        <div class="form-group">\n            <div class="col-md-9 col-md-offset-3">\n                <div id="messages"></div>\n            </div>\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n\n</form>\n'),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-movie-form.tpl.html",'<form id="movieForm" method="post">\n\n    <fieldset>\n        <legend>\n            Default Form Elements\n        </legend>\n        <div class="form-group">\n            <div class="row">\n                <div class="col-md-8">\n                    <label class="control-label">Movie title</label>\n                    <input type="text" class="form-control" name="title" />\n                </div>\n\n                <div class="col-md-4 selectContainer">\n                    <label class="control-label">Genre</label>\n                    <select class="form-control" name="genre">\n                        <option value="">Choose a genre</option>\n                        <option value="action">Action</option>\n                        <option value="comedy">Comedy</option>\n                        <option value="horror">Horror</option>\n                        <option value="romance">Romance</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <div class="row">\n                <div class="col-sm-12 col-md-4">\n                    <label class="control-label">Director</label>\n                    <input type="text" class="form-control" name="director" />\n                </div>\n\n                <div class="col-sm-12 col-md-4">\n                    <label class="control-label">Writer</label>\n                    <input type="text" class="form-control" name="writer" />\n                </div>\n\n                <div class="col-sm-12 col-md-4">\n                    <label class="control-label">Producer</label>\n                    <input type="text" class="form-control" name="producer" />\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <div class="row">\n                <div class="col-sm-12 col-md-6">\n                    <label class="control-label">Website</label>\n                    <input type="text" class="form-control" name="website" />\n                </div>\n\n                <div class="col-sm-12 col-md-6">\n                    <label class="control-label">Youtube trailer</label>\n                    <input type="text" class="form-control" name="trailer" />\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="control-label">Review</label>\n            <textarea class="form-control" name="review" rows="8"></textarea>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n\n            <div class="row">\n                <div class="col-sm-12 col-md-12">\n                    <label class="control-label">Rating</label>\n                </div>\n\n                <div class="col-sm-12 col-md-10">\n\n                    <label class="radio radio-inline no-margin">\n                        <input type="radio" name="rating" value="terrible" class="radiobox style-2" />\n                        <span>Terrible</span> </label>\n\n                    <label class="radio radio-inline">\n                        <input type="radio" name="rating" value="watchable" class="radiobox style-2" />\n                        <span>Watchable</span> </label>\n                    <label class="radio radio-inline">\n                        <input type="radio" name="rating" value="best" class="radiobox style-2" />\n                        <span>Best ever</span> </label>\n\n                </div>\n\n            </div>\n\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n\n</form>\n\n '),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-product-form.tpl.html",'<form id="productForm" class="form-horizontal">\n\n    <fieldset>\n        <legend>\n            Default Form Elements\n        </legend>\n        <div class="form-group">\n            <label class="col-xs-2 col-lg-3 control-label">Price</label>\n            <div class="col-xs-9 col-lg-6 inputGroupContainer">\n                <div class="input-group">\n                    <input type="text" class="form-control" name="price" />\n                    <span class="input-group-addon">$</span>\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-xs-2 col-lg-3 control-label">Amount</label>\n            <div class="col-xs-9 col-lg-6 inputGroupContainer">\n                <div class="input-group">\n                    <span class="input-group-addon">&#8364;</span>\n                    <input type="text" class="form-control" name="amount" />\n                </div>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-xs-2 col-lg-3 control-label">Color</label>\n            <div class="col-xs-9 col-lg-6 selectContainer">\n                <select class="form-control" name="color">\n                    <option value="">Choose a color</option>\n                    <option value="blue">Blue</option>\n                    <option value="green">Green</option>\n                    <option value="red">Red</option>\n                    <option value="yellow">Yellow</option>\n                    <option value="white">White</option>\n                </select>\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-xs-2 col-lg-3 control-label">Size</label>\n            <div class="col-xs-9 col-lg-6 selectContainer">\n                <select class="form-control" name="size">\n                    <option value="">Choose a size</option>\n                    <option value="S">S</option>\n                    <option value="M">M</option>\n                    <option value="L">L</option>\n                    <option value="XL">XL</option>\n                </select>\n            </div>\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n</form>\n\n'),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-profile-form.tpl.html",'<form id="profileForm">\n\n    <fieldset>\n        <legend>\n            Default Form Elements\n        </legend>\n        <div class="form-group">\n            <label>Email address</label>\n            <input type="text" class="form-control" name="email" />\n        </div>\n    </fieldset>\n    <fieldset>\n        <div class="form-group">\n            <label>Password</label>\n            <input type="password" class="form-control" name="password" />\n        </div>\n    </fieldset>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n</form>\n'),a.put("build/modules/forms/directives/bootstrap-validation/bootstrap-toggling-form.tpl.html",'<form id="togglingForm" method="post" class="form-horizontal">\n\n    <fieldset>\n        <legend>\n            Default Form Elements\n        </legend>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Full name <sup>*</sup></label>\n            <div class="col-lg-4">\n                <input type="text" class="form-control" name="firstName" placeholder="First name" />\n            </div>\n            <div class="col-lg-4">\n                <input type="text" class="form-control" name="lastName" placeholder="Last name" />\n            </div>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Company <sup>*</sup></label>\n            <div class="col-lg-5">\n                <input type="text" class="form-control" name="company"\n                       required data-bv-notempty-message="The company name is required" />\n            </div>\n            <div class="col-lg-2">\n                <button type="button" class="btn btn-info btn-sm" data-toggle="#jobInfo">\n                    Add more info\n                </button>\n            </div>\n        </div>\n    </fieldset>\n\n    <!-- These fields will not be validated as long as they are not visible -->\n    <div id="jobInfo" style="display: none;">\n        <fieldset>\n            <div class="form-group">\n                <label class="col-lg-3 control-label">Job title <sup>*</sup></label>\n                <div class="col-lg-5">\n                    <input type="text" class="form-control" name="job" />\n                </div>\n            </div>\n        </fieldset>\n\n        <fieldset>\n            <div class="form-group">\n                <label class="col-lg-3 control-label">Department <sup>*</sup></label>\n                <div class="col-lg-5">\n                    <input type="text" class="form-control" name="department" />\n                </div>\n            </div>\n        </fieldset>\n    </div>\n\n    <fieldset>\n        <div class="form-group">\n            <label class="col-lg-3 control-label">Mobile phone <sup>*</sup></label>\n            <div class="col-lg-5">\n                <input type="text" class="form-control" name="mobilePhone" />\n            </div>\n            <div class="col-lg-2">\n                <button type="button" class="btn btn-info btn-sm" data-toggle="#phoneInfo">\n                    Add more phone numbers\n                </button>\n            </div>\n        </div>\n    </fieldset>\n    <!-- These fields will not be validated as long as they are not visible -->\n    <div id="phoneInfo" style="display: none;">\n\n        <fieldset>\n            <div class="form-group">\n                <label class="col-lg-3 control-label">Home phone</label>\n                <div class="col-lg-5">\n                    <input type="text" class="form-control" name="homePhone" />\n                </div>\n            </div>\n        </fieldset>\n        <fieldset>\n            <div class="form-group">\n                <label class="col-lg-3 control-label">Office phone</label>\n                <div class="col-lg-5">\n                    <input type="text" class="form-control" name="officePhone" />\n                </div>\n            </div>\n        </fieldset>\n    </div>\n\n    <div class="form-actions">\n        <div class="row">\n            <div class="col-md-12">\n                <button class="btn btn-default" type="submit">\n                    <i class="fa fa-eye"></i>\n                    Validate\n                </button>\n            </div>\n        </div>\n    </div>\n</form>'),a.put("build/modules/forms/directives/form-layouts/smart-checkout-form.tpl.html",'<form id="checkout-form" class="smart-form" novalidate="novalidate">\n\n<fieldset>\n    <div class="row">\n        <section class="col col-6">\n            <label class="input"> <i class="icon-prepend fa fa-user"></i>\n                <input type="text" name="fname" placeholder="First name">\n            </label>\n        </section>\n        <section class="col col-6">\n            <label class="input"> <i class="icon-prepend fa fa-user"></i>\n                <input type="text" name="lname" placeholder="Last name">\n            </label>\n        </section>\n    </div>\n\n    <div class="row">\n        <section class="col col-6">\n            <label class="input"> <i class="icon-prepend fa fa-envelope-o"></i>\n                <input type="email" name="email" placeholder="E-mail">\n            </label>\n        </section>\n        <section class="col col-6">\n            <label class="input"> <i class="icon-prepend fa fa-phone"></i>\n                <input type="tel" name="phone" placeholder="Phone" data-smart-masked-input="(999) 999-9999">\n            </label>\n        </section>\n    </div>\n</fieldset>\n\n<fieldset>\n<div class="row">\n<section class="col col-5">\n<label class="select">\n<select name="country">\n<option value="0" selected="" disabled="">Country</option>\n    <option value="{{country.key}}" ng-repeat="country in countries" >{{country.value}}</option>\n</select> <i></i> </label>\n</section>\n\n<section class="col col-4">\n    <label class="input">\n        <input type="text" name="city" placeholder="City">\n    </label>\n</section>\n\n<section class="col col-3">\n    <label class="input">\n        <input type="text" name="code" placeholder="Post code">\n    </label>\n</section>\n</div>\n\n<section>\n    <label for="address2" class="input">\n        <input type="text" name="address2" id="address2" placeholder="Address">\n    </label>\n</section>\n\n<section>\n    <label class="textarea">\n        <textarea rows="3" name="info" placeholder="Additional info"></textarea>\n    </label>\n</section>\n</fieldset>\n\n<fieldset>\n    <section>\n        <div class="inline-group">\n            <label class="radio">\n                <input type="radio" name="radio-inline" checked="">\n                <i></i>Visa</label>\n            <label class="radio">\n                <input type="radio" name="radio-inline">\n                <i></i>MasterCard</label>\n            <label class="radio">\n                <input type="radio" name="radio-inline">\n                <i></i>American Express</label>\n        </div>\n    </section>\n\n    <section>\n        <label class="input">\n            <input type="text" name="name" placeholder="Name on card">\n        </label>\n    </section>\n\n    <div class="row">\n        <section class="col col-10">\n            <label class="input">\n                <input type="text" name="card" placeholder="Card number" data-mask="9999-9999-9999-9999">\n            </label>\n        </section>\n        <section class="col col-2">\n            <label class="input">\n                <input type="text" name="cvv" placeholder="CVV2" data-mask="999">\n            </label>\n        </section>\n    </div>\n\n    <div class="row">\n        <label class="label col col-4">Expiration date</label>\n        <section class="col col-5">\n            <label class="select">\n                <select name="month">\n                    <option value="0" selected="" disabled="">Month</option>\n                    <option value="1">January</option>\n                    <option value="1">February</option>\n                    <option value="3">March</option>\n                    <option value="4">April</option>\n                    <option value="5">May</option>\n                    <option value="6">June</option>\n                    <option value="7">July</option>\n                    <option value="8">August</option>\n                    <option value="9">September</option>\n                    <option value="10">October</option>\n                    <option value="11">November</option>\n                    <option value="12">December</option>\n                </select> <i></i> </label>\n        </section>\n        <section class="col col-3">\n            <label class="input">\n                <input type="text" name="year" placeholder="Year" data-mask="2099">\n            </label>\n        </section>\n    </div>\n</fieldset>\n\n<footer>\n    <button type="submit" class="btn btn-primary">\n        Validate Form\n    </button>\n</footer>\n</form>\n'),
 a.put("build/modules/forms/directives/form-layouts/smart-comment-form.tpl.html",'<form action="/api/plug" method="post" id="comment-form" class="smart-form">\n    <header>\n        Comment form\n    </header>\n\n    <fieldset>\n        <div class="row">\n            <section class="col col-4">\n                <label class="label">Name</label>\n                <label class="input"> <i class="icon-append fa fa-user"></i>\n                    <input type="text" name="name">\n                </label>\n            </section>\n            <section class="col col-4">\n                <label class="label">E-mail</label>\n                <label class="input"> <i class="icon-append fa fa-envelope-o"></i>\n                    <input type="email" name="email">\n                </label>\n            </section>\n            <section class="col col-4">\n                <label class="label">Website</label>\n                <label class="input"> <i class="icon-append fa fa-globe"></i>\n                    <input type="url" name="url">\n                </label>\n            </section>\n        </div>\n\n        <section>\n            <label class="label">Comment</label>\n            <label class="textarea"> <i class="icon-append fa fa-comment"></i> <textarea rows="4"\n                                                                                         name="comment"></textarea>\n            </label>\n\n            <div class="note">\n                You may use these HTML tags and attributes: &lt;a href="" title=""&gt;, &lt;abbr title=""&gt;,\n                &lt;acronym title=""&gt;, &lt;b&gt;, &lt;blockquote cite=""&gt;, &lt;cite&gt;, &lt;code&gt;,\n                &lt;del datetime=""&gt;, &lt;em&gt;, &lt;i&gt;, &lt;q cite=""&gt;, &lt;strike&gt;, &lt;strong&gt;.\n            </div>\n        </section>\n    </fieldset>\n\n    <footer>\n        <button type="submit" name="submit" class="btn btn-primary">\n            Validate Form\n        </button>\n    </footer>\n\n    <div class="message">\n        <i class="fa fa-check fa-lg"></i>\n\n        <p>\n            Your comment was successfully added!\n        </p>\n    </div>\n</form>'),a.put("build/modules/forms/directives/form-layouts/smart-contacts-form.tpl.html",'<form action="/api/plug" method="post" id="contact-form" class="smart-form">\n    <header>Contacts form</header>\n\n    <fieldset>\n        <div class="row">\n            <section class="col col-6">\n                <label class="label">Name</label>\n                <label class="input">\n                    <i class="icon-append fa fa-user"></i>\n                    <input type="text" name="name" id="named">\n                </label>\n            </section>\n            <section class="col col-6">\n                <label class="label">E-mail</label>\n                <label class="input">\n                    <i class="icon-append fa fa-envelope-o"></i>\n                    <input type="email" name="email" id="emaild">\n                </label>\n            </section>\n        </div>\n\n        <section>\n            <label class="label">Subject</label>\n            <label class="input">\n                <i class="icon-append fa fa-tag"></i>\n                <input type="text" name="subject" id="subject">\n            </label>\n        </section>\n\n        <section>\n            <label class="label">Message</label>\n            <label class="textarea">\n                <i class="icon-append fa fa-comment"></i>\n                <textarea rows="4" name="message" id="message"></textarea>\n            </label>\n        </section>\n\n        <section>\n            <label class="checkbox"><input type="checkbox" name="copy" id="copy"><i></i>Send a copy to my\n                e-mail address</label>\n        </section>\n    </fieldset>\n\n    <footer>\n        <button type="submit" class="btn btn-primary">Validate Form</button>\n    </footer>\n\n    <div class="message">\n        <i class="fa fa-thumbs-up"></i>\n\n        <p>Your message was successfully sent!</p>\n    </div>\n</form>'),a.put("build/modules/forms/directives/form-layouts/smart-order-form.tpl.html",'<form id="order-form" class="smart-form" novalidate="novalidate">\n    <header>\n        Order services\n    </header>\n\n    <fieldset>\n        <div class="row">\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-user"></i>\n                    <input type="text" name="name" placeholder="Name">\n                </label>\n            </section>\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-briefcase"></i>\n                    <input type="text" name="company" placeholder="Company">\n                </label>\n            </section>\n        </div>\n\n        <div class="row">\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-envelope-o"></i>\n                    <input type="email" name="email" placeholder="E-mail">\n                </label>\n            </section>\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-phone"></i>\n                    <input type="tel" name="phone" placeholder="Phone" data-smart-masked-input="(999) 999-9999">\n                </label>\n            </section>\n        </div>\n    </fieldset>\n\n    <fieldset>\n        <div class="row">\n            <section class="col col-6">\n                <label class="select">\n                    <select name="interested">\n                        <option value="0" selected="" disabled="">Interested in</option>\n                        <option value="1">design</option>\n                        <option value="1">development</option>\n                        <option value="2">illustration</option>\n                        <option value="2">branding</option>\n                        <option value="3">video</option>\n                    </select> <i></i> </label>\n            </section>\n            <section class="col col-6">\n                <label class="select">\n                    <select name="budget">\n                        <option value="0" selected="" disabled="">Budget</option>\n                        <option value="1">less than 5000$</option>\n                        <option value="2">5000$ - 10000$</option>\n                        <option value="3">10000$ - 20000$</option>\n                        <option value="4">more than 20000$</option>\n                    </select> <i></i> </label>\n            </section>\n        </div>\n\n        <div class="row">\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-calendar"></i>\n                    <input type="text" name="startdate" id="startdate" data-smart-datepicker data-min-restrict="#finishdate" placeholder="Expected start date">\n                </label>\n            </section>\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-calendar"></i>\n                    <input type="text" name="finishdate" id="finishdate" data-smart-datepicker data-max-restrict="#startdate" placeholder="Expected finish date">\n                </label>\n            </section>\n        </div>\n\n        <section>\n            <div class="input input-file">\n                            <span class="button"><input id="file2" type="file" name="file2"\n                                                        onchange="this.parentNode.nextSibling.value = this.value">Browse</span><input\n                    type="text" placeholder="Include some files" readonly="">\n            </div>\n        </section>\n\n        <section>\n            <label class="textarea"> <i class="icon-append fa fa-comment"></i>\n                <textarea rows="5" name="comment" placeholder="Tell us about your project"></textarea>\n            </label>\n        </section>\n    </fieldset>\n    <footer>\n        <button type="submit" class="btn btn-primary">\n            Validate Form\n        </button>\n    </footer>\n</form>\n'),a.put("build/modules/forms/directives/form-layouts/smart-registration-form.tpl.html",'<form id="smart-form-register" class="smart-form">\n    <header>\n        Registration form\n    </header>\n\n    <fieldset>\n        <section>\n            <label class="input"> <i class="icon-append fa fa-user"></i>\n                <input type="text" name="username" placeholder="Username">\n                <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>\n        </section>\n\n\n        <section>\n            <label class="input"> <i class="icon-append fa fa-envelope-o"></i>\n                <input type="email" name="email" placeholder="Email address">\n                <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>\n        </section>\n\n        <section>\n            <label class="input"> <i class="icon-append fa fa-lock"></i>\n                <input type="password" name="password" placeholder="Password" id="password">\n                <b class="tooltip tooltip-bottom-right">Don\'t forget your password</b> </label>\n        </section>\n\n        <section>\n            <label class="input"> <i class="icon-append fa fa-lock"></i>\n                <input type="password" name="passwordConfirm" placeholder="Confirm password">\n                <b class="tooltip tooltip-bottom-right">Don\'t forget your password</b> </label>\n        </section>\n    </fieldset>\n\n    <fieldset>\n        <div class="row">\n            <section class="col col-6">\n                <label class="input">\n                    <input type="text" name="firstname" placeholder="First name">\n                </label>\n            </section>\n            <section class="col col-6">\n                <label class="input">\n                    <input type="text" name="lastname" placeholder="Last name">\n                </label>\n            </section>\n        </div>\n\n        <div class="row">\n            <section class="col col-6">\n                <label class="select">\n                    <select name="gender">\n                        <option value="0" selected="" disabled="">Gender</option>\n                        <option value="1">Male</option>\n                        <option value="2">Female</option>\n                        <option value="3">Prefer not to answer</option>\n                    </select> <i></i> </label>\n            </section>\n            <section class="col col-6">\n                <label class="input"> <i class="icon-append fa fa-calendar"></i>\n                    <input type="text" name="request" placeholder="Request activation on"\n                           data-smart-datepicker data-dateformat=\'dd/mm/yy\'>\n                </label>\n            </section>\n        </div>\n\n        <section>\n            <label class="checkbox">\n                <input type="checkbox" name="subscription" id="subscription">\n                <i></i>I want to receive news and special offers</label>\n            <label class="checkbox">\n                <input type="checkbox" name="terms" id="terms">\n                <i></i>I agree with the Terms and Conditions</label>\n        </section>\n    </fieldset>\n    <footer>\n        <button type="submit" class="btn btn-primary">\n            Validate Form\n        </button>\n    </footer>\n</form>'),a.put("build/modules/forms/directives/form-layouts/smart-review-form.tpl.html",'<form id="review-form" class="smart-form">\n    <header>\n        Review form\n    </header>\n\n    <fieldset>\n        <section>\n            <label class="input"> <i class="icon-append fa fa-user"></i>\n                <input type="text" name="name" id="name" placeholder="Your name">\n            </label>\n        </section>\n\n        <section>\n            <label class="input"> <i class="icon-append fa fa-envelope-o"></i>\n                <input type="email" name="email" id="email" placeholder="Your e-mail">\n            </label>\n        </section>\n\n        <section>\n            <label class="label"></label>\n            <label class="textarea"> <i class="icon-append fa fa-comment"></i>\n                <textarea rows="3" name="review" id="review" placeholder="Text of the review"></textarea>\n            </label>\n        </section>\n\n        <section>\n            <div class="rating">\n                <input type="radio" name="quality" id="quality-5">\n                <label for="quality-5"><i class="fa fa-star"></i></label>\n                <input type="radio" name="quality" id="quality-4">\n                <label for="quality-4"><i class="fa fa-star"></i></label>\n                <input type="radio" name="quality" id="quality-3">\n                <label for="quality-3"><i class="fa fa-star"></i></label>\n                <input type="radio" name="quality" id="quality-2">\n                <label for="quality-2"><i class="fa fa-star"></i></label>\n                <input type="radio" name="quality" id="quality-1">\n                <label for="quality-1"><i class="fa fa-star"></i></label>\n                Quality of the product\n            </div>\n\n            <div class="rating">\n                <input type="radio" name="reliability" id="reliability-5">\n                <label for="reliability-5"><i class="fa fa-star"></i></label>\n                <input type="radio" name="reliability" id="reliability-4">\n                <label for="reliability-4"><i class="fa fa-star"></i></label>\n                <input type="radio" name="reliability" id="reliability-3">\n                <label for="reliability-3"><i class="fa fa-star"></i></label>\n                <input type="radio" name="reliability" id="reliability-2">\n                <label for="reliability-2"><i class="fa fa-star"></i></label>\n                <input type="radio" name="reliability" id="reliability-1">\n                <label for="reliability-1"><i class="fa fa-star"></i></label>\n                Reliability of the product\n            </div>\n\n            <div class="rating">\n                <input type="radio" name="overall" id="overall-5">\n                <label for="overall-5"><i class="fa fa-star"></i></label>\n                <input type="radio" name="overall" id="overall-4">\n                <label for="overall-4"><i class="fa fa-star"></i></label>\n                <input type="radio" name="overall" id="overall-3">\n                <label for="overall-3"><i class="fa fa-star"></i></label>\n                <input type="radio" name="overall" id="overall-2">\n                <label for="overall-2"><i class="fa fa-star"></i></label>\n                <input type="radio" name="overall" id="overall-1">\n                <label for="overall-1"><i class="fa fa-star"></i></label>\n                Overall rating\n            </div>\n        </section>\n    </fieldset>\n    <footer>\n        <button type="submit" class="btn btn-primary">\n            Validate Form\n        </button>\n    </footer>\n</form>'),a.put("build/setup/live-feeds.tpl.html",'<div jarvis-widget id="live-feeds-widget" data-widget-togglebutton="false" data-widget-editbutton="false"\n     data-widget-fullscreenbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">\n<!-- widget options:\nusage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">\n\ndata-widget-colorbutton="false"\ndata-widget-editbutton="false"\ndata-widget-togglebutton="false"\ndata-widget-deletebutton="false"\ndata-widget-fullscreenbutton="false"\ndata-widget-custombutton="false"\ndata-widget-collapsed="true"\ndata-widget-sortable="false"\n\n-->\n<header>\n    <span class="widget-icon"> <i class="glyphicon glyphicon-stats txt-color-darken"></i> </span>\n\n    <h2>Live Feeds </h2>\n\n    <ul class="nav nav-tabs pull-right in" id="myTab">\n        <li class="active">\n            <a data-toggle="tab" href="#s1"><i class="fa fa-clock-o"></i> <span class="hidden-mobile hidden-tablet">Live Stats</span></a>\n        </li>\n\n        <li>\n            <a data-toggle="tab" href="#s2"><i class="fa fa-facebook"></i> <span class="hidden-mobile hidden-tablet">Social Network</span></a>\n        </li>\n\n        <li>\n            <a data-toggle="tab" href="#s3"><i class="fa fa-dollar"></i> <span class="hidden-mobile hidden-tablet">Revenue</span></a>\n        </li>\n    </ul>\n\n</header>\n\n<!-- widget div-->\n<div class="no-padding">\n\n    <div class="widget-body">\n        <!-- content -->\n        <div id="myTabContent" class="tab-content">\n            <div class="tab-pane fade active in padding-10 no-padding-bottom" id="s1">\n                <div class="row no-space">\n                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">\n														<span class="demo-liveupdate-1"> <span\n                                                                class="onoffswitch-title">Live switch</span> <span\n                                                                class="onoffswitch">\n																<input type="checkbox" name="start_interval" ng-model="autoUpdate"\n                                                                       class="onoffswitch-checkbox" id="start_interval">\n																<label class="onoffswitch-label" for="start_interval">\n                                                                    <span class="onoffswitch-inner"\n                                                                          data-swchon-text="ON"\n                                                                          data-swchoff-text="OFF"></span>\n                                                                    <span class="onoffswitch-switch"></span>\n                                                                </label> </span> </span>\n\n                        <div id="updating-chart" class="chart-large txt-color-blue" flot-basic flot-data="liveStats" flot-options="liveStatsOptions"></div>\n\n                    </div>\n                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 show-stats">\n\n                        <div class="row">\n                            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span class="text"> My Tasks <span\n                                    class="pull-right">130/200</span> </span>\n\n                                <div class="progress">\n                                    <div class="progress-bar bg-color-blueDark" style="width: 65%;"></div>\n                                </div>\n                            </div>\n                            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span class="text"> Transfered <span\n                                    class="pull-right">440 GB</span> </span>\n\n                                <div class="progress">\n                                    <div class="progress-bar bg-color-blue" style="width: 34%;"></div>\n                                </div>\n                            </div>\n                            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span class="text"> Bugs Squashed<span\n                                    class="pull-right">77%</span> </span>\n\n                                <div class="progress">\n                                    <div class="progress-bar bg-color-blue" style="width: 77%;"></div>\n                                </div>\n                            </div>\n                            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span class="text"> User Testing <span\n                                    class="pull-right">7 Days</span> </span>\n\n                                <div class="progress">\n                                    <div class="progress-bar bg-color-greenLight" style="width: 84%;"></div>\n                                </div>\n                            </div>\n\n                            <span class="show-stat-buttons"> <span class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <a\n                                    href-void class="btn btn-default btn-block hidden-xs">Generate PDF</a> </span> <span\n                                    class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <a href-void\n                                                                                     class="btn btn-default btn-block hidden-xs">Report\n                                a bug</a> </span> </span>\n\n                        </div>\n\n                    </div>\n                </div>\n\n                <div class="show-stat-microcharts" data-sparkline-container data-easy-pie-chart-container>\n                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n\n                        <div class="easy-pie-chart txt-color-orangeDark" data-percent="33" data-pie-size="50">\n                            <span class="percent percent-sign">35</span>\n                        </div>\n                        <span class="easy-pie-title"> Server Load <i class="fa fa-caret-up icon-color-bad"></i> </span>\n                        <ul class="smaller-stat hidden-sm pull-right">\n                            <li>\n                                <span class="label bg-color-greenLight"><i class="fa fa-caret-up"></i> 97%</span>\n                            </li>\n                            <li>\n                                <span class="label bg-color-blueLight"><i class="fa fa-caret-down"></i> 44%</span>\n                            </li>\n                        </ul>\n                        <div class="sparkline txt-color-greenLight hidden-sm hidden-md pull-right"\n                             data-sparkline-type="line" data-sparkline-height="33px" data-sparkline-width="70px"\n                             data-fill-color="transparent">\n                            130, 187, 250, 257, 200, 210, 300, 270, 363, 247, 270, 363, 247\n                        </div>\n                    </div>\n                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n                        <div class="easy-pie-chart txt-color-greenLight" data-percent="78.9" data-pie-size="50">\n                            <span class="percent percent-sign">78.9 </span>\n                        </div>\n                        <span class="easy-pie-title"> Disk Space <i class="fa fa-caret-down icon-color-good"></i></span>\n                        <ul class="smaller-stat hidden-sm pull-right">\n                            <li>\n                                <span class="label bg-color-blueDark"><i class="fa fa-caret-up"></i> 76%</span>\n                            </li>\n                            <li>\n                                <span class="label bg-color-blue"><i class="fa fa-caret-down"></i> 3%</span>\n                            </li>\n                        </ul>\n                        <div class="sparkline txt-color-blue hidden-sm hidden-md pull-right" data-sparkline-type="line"\n                             data-sparkline-height="33px" data-sparkline-width="70px" data-fill-color="transparent">\n                            257, 200, 210, 300, 270, 363, 130, 187, 250, 247, 270, 363, 247\n                        </div>\n                    </div>\n                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n                        <div class="easy-pie-chart txt-color-blue" data-percent="23" data-pie-size="50">\n                            <span class="percent percent-sign">23 </span>\n                        </div>\n                        <span class="easy-pie-title"> Transfered <i class="fa fa-caret-up icon-color-good"></i></span>\n                        <ul class="smaller-stat hidden-sm pull-right">\n                            <li>\n                                <span class="label bg-color-darken">10GB</span>\n                            </li>\n                            <li>\n                                <span class="label bg-color-blueDark"><i class="fa fa-caret-up"></i> 10%</span>\n                            </li>\n                        </ul>\n                        <div class="sparkline txt-color-darken hidden-sm hidden-md pull-right"\n                             data-sparkline-type="line" data-sparkline-height="33px" data-sparkline-width="70px"\n                             data-fill-color="transparent">\n                            200, 210, 363, 247, 300, 270, 130, 187, 250, 257, 363, 247, 270\n                        </div>\n                    </div>\n                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n                        <div class="easy-pie-chart txt-color-darken" data-percent="36" data-pie-size="50">\n                            <span class="percent degree-sign">36 <i class="fa fa-caret-up"></i></span>\n                        </div>\n                        <span class="easy-pie-title"> Temperature <i\n                                class="fa fa-caret-down icon-color-good"></i></span>\n                        <ul class="smaller-stat hidden-sm pull-right">\n                            <li>\n                                <span class="label bg-color-red"><i class="fa fa-caret-up"></i> 124</span>\n                            </li>\n                            <li>\n                                <span class="label bg-color-blue"><i class="fa fa-caret-down"></i> 40 F</span>\n                            </li>\n                        </ul>\n                        <div class="sparkline txt-color-red hidden-sm hidden-md pull-right" data-sparkline-type="line"\n                             data-sparkline-height="33px" data-sparkline-width="70px" data-fill-color="transparent">\n                            2700, 3631, 2471, 2700, 3631, 2471, 1300, 1877, 2500, 2577, 2000, 2100, 3000\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n            <!-- end s1 tab pane -->\n\n            <div class="tab-pane fade" id="s2">\n                <div class="widget-body-toolbar bg-color-white">\n\n                    <form class="form-inline" role="form">\n\n                        <div class="form-group">\n                            <label class="sr-only" for="s123">Show From</label>\n                            <input type="email" class="form-control input-sm" id="s123" placeholder="Show From">\n                        </div>\n                        <div class="form-group">\n                            <input type="email" class="form-control input-sm" id="s124" placeholder="To">\n                        </div>\n\n                        <div class="btn-group hidden-phone pull-right">\n                            <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i\n                                    class="fa fa-cog"></i> More <span class="caret"> </span> </a>\n                            <ul class="dropdown-menu pull-right">\n                                <li>\n                                    <a href-void><i class="fa fa-file-text-alt"></i> Export to PDF</a>\n                                </li>\n                                <li>\n                                    <a href-void><i class="fa fa-question-sign"></i> Help</a>\n                                </li>\n                            </ul>\n                        </div>\n\n                    </form>\n\n                </div>\n                <div class="padding-10">\n                    <div id="statsChart" class="chart-large has-legend-unique" flot-basic flot-data="statsData" flot-options="statsDisplayOptions"></div>\n                </div>\n\n            </div>\n            <!-- end s2 tab pane -->\n\n            <div class="tab-pane fade" id="s3">\n\n                <div class="widget-body-toolbar bg-color-white smart-form" id="rev-toggles">\n\n                    <div class="inline-group">\n\n                        <label for="gra-0" class="checkbox">\n                            <input type="checkbox" id="gra-0" ng-model="targetsShow">\n                            <i></i> Target </label>\n                        <label for="gra-1" class="checkbox">\n                            <input type="checkbox" id="gra-1" ng-model="actualsShow">\n                            <i></i> Actual </label>\n                        <label for="gra-2" class="checkbox">\n                            <input type="checkbox" id="gra-2" ng-model="signupsShow">\n                            <i></i> Signups </label>\n                    </div>\n\n                    <div class="btn-group hidden-phone pull-right">\n                        <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i\n                                class="fa fa-cog"></i> More <span class="caret"> </span> </a>\n                        <ul class="dropdown-menu pull-right">\n                            <li>\n                                <a href-void><i class="fa fa-file-text-alt"></i> Export to PDF</a>\n                            </li>\n                            <li>\n                                <a href-void><i class="fa fa-question-sign"></i> Help</a>\n                            </li>\n                        </ul>\n                    </div>\n\n                </div>\n\n                <div class="padding-10">\n                    <div id="flotcontainer" class="chart-large has-legend-unique" flot-basic flot-data="revenewData" flot-options="revenewDisplayOptions"></div>\n                </div>\n            </div>\n            <!-- end s3 tab pane -->\n        </div>\n\n        <!-- end content -->\n    </div>\n\n</div>\n<!-- end widget div -->\n</div>\n')}])});
 define('includes',["auth/module","auth/models/User","layout/module","layout/actions/minifyMenu","layout/actions/toggleMenu","layout/actions/fullScreen","layout/actions/resetWidgets","layout/actions/resetWidgets","layout/actions/searchMobile","layout/directives/demo/demoStates","layout/directives/smartInclude","layout/directives/smartDeviceDetect","layout/directives/smartFastClick","layout/directives/smartLayout","layout/directives/smartSpeech","layout/directives/smartRouterAnimationWrap","layout/directives/smartFitAppView","layout/directives/radioToggle","layout/directives/dismisser","layout/directives/smartMenu","layout/directives/bigBreadcrumbs","layout/directives/stateBreadcrumbs","layout/directives/smartPageTitle","layout/directives/hrefVoid","layout/service/SmartCss","modules/widgets/directives/widgetGrid","modules/widgets/directives/jarvisWidget","dashboard/module","setup/module","components/language/Language","components/language/languageSelector","components/language/language-controller","components/projects/Project","components/projects/recentProjects","components/activities/activities-controller","components/activities/activities-dropdown-toggle-directive","components/activities/activities-service","components/shortcut/shortcut-directive","components/calendar/module","components/calendar/models/CalendarEvent","components/calendar/directives/fullCalendar","components/calendar/directives/dragableEvent","components/calendar/controllers/CalendarCtrl","components/inbox/module","components/inbox/models/InboxConfig","components/inbox/models/InboxMessage","components/todo/TodoCtrl","components/todo/models/Todo","components/todo/directives/todoList","components/chat/module","modules/graphs/module","modules/tables/module","modules/forms/module","modules/ui/module","modules/widgets/module","modules/maps/module","modules/app-views/module","modules/misc/module","modules/smart-admin/module","smart-templates"],function(){"use strict"});
-/*! SmartAdmin - v1.5.2 - 2015-04-16 */$(document).ready(function(){treeJSON=d3.json("plugin/dndTree/flare.json",function(a,b){function c(){$(function(){$.contextMenu({"selector":".node image","callback":function(){$("#popoverRollIn").removeClass("hide"),$("#popOverIn").css("top",$(this).position().top-$("#popoverRollIn #popOverIn").height()/2+18),$("#popOverIn").css("left",$(this).position().left-$("#popoverRollIn #popOverIn").width()-5),$("#fullNameProfilePop").text($(this).closest(".node").data().fullname+" - "+$(this).closest(".node").data().title)},"items":{"view":{"name":"View Profile"},"expand":{"name":"Expand"},"sep1":"---------","quit":{"name":"Close this menu"}}})})}function d(a,b,c){if(a){b(a);var e=c(a);if(e)for(var f=e.length,g=0;f>g;g++)d(e[g],b,c)}}function e(){C.sort(function(a,b){return b.displayname.toLowerCase()<a.displayname.toLowerCase()?1:-1})}function f(a,b){var c=u;panTimer&&(clearTimeout(panTimer),translateCoords=d3.transform(J.attr("transform")),"left"==b||"right"==b?(translateX="left"==b?translateCoords.translate[0]+c:translateCoords.translate[0]-c,translateY=translateCoords.translate[1]):("up"==b||"down"==b)&&(translateX=translateCoords.translate[0],translateY="up"==b?translateCoords.translate[1]+c:translateCoords.translate[1]-c),scaleX=translateCoords.scale[0],scaleY=translateCoords.scale[1],scale=E.scale(),J.transition().attr("transform","translate("+translateX+","+translateY+")scale("+scale+")"),d3.select(a).select("g.node").attr("transform","translate("+translateX+","+translateY+")"),E.scale(E.scale()),E.translate([translateX,translateY]),panTimer=setTimeout(function(){f(a,c,b)},50))}function g(){J.attr("transform","translate("+d3.event.translate+")scale("+d3.event.scale+")")}function h(a,b){t=a,d3.select(b).select(".ghostCircle").attr("pointer-events","none"),d3.selectAll(".ghostCircle").attr("class","ghostCircle show"),d3.select(b).attr("class","node activeDrag"),J.selectAll("g.node").sort(function(a){return a.id!=t.id?1:-1}),nodes.length>1&&(links=C.links(nodes),nodePaths=J.selectAll("path.link").data(links,function(a){return a.target.id}).remove(),nodesExit=J.selectAll("g.node").data(nodes,function(a){return a.id}).filter(function(a){return a.id==t.id?!1:!0}).remove()),parentLink=C.links(C.nodes(t.parent)),J.selectAll("path.link").filter(function(a){return a.target.id==t.id?!0:!1}).remove(),dragStarted=null}function i(){s=null,d3.selectAll(".ghostCircle").attr("class","ghostCircle"),d3.select(domNode).attr("class","node"),d3.select(domNode).select(".ghostCircle").attr("pointer-events",""),I(),null!==t&&(o(p),k(t),t=null)}function j(a){a._children&&(a.children=a._children,a.children.forEach(j),a._children=null)}function k(a){scale=E.scale(),x=-a.y0,y=-a.x0,x=x*scale+A/2,y=y*scale+B/2,d3.select("g").transition().duration(z).attr("transform","translate("+x+","+y+")scale("+scale+")"),E.scale(scale),E.translate([x,y])}function l(a){return a.children?(a._children=a.children,a.children=null):a._children&&(a.children=a._children,a._children=null),a}function m(a){if(!d3.event.defaultPrevented){if(a=l(a),null!==a.children&&void 0!==a.children)for(var b=0;b<a.children.length;b++)null!==a.children[b].children&&void 0!==a.children[b].children&&(a.children[b]=l(a.children[b]));o(a),k(a)}}function n(){$("#popoverRollIn").each(function(){$(this).mouseover(function(){})})}function o(a,b){var c=[1],d=function(a,b){b.children&&b.children.length>0&&(c.length<=a+1&&c.push(0),c[a+1]+=b.children.length,b.children.forEach(function(b){d(a+1,b)}))};d(0,p);var e=125*d3.max(c);C=C.size([e,A]),b&&(p=l(p));var f=C.nodes(p).reverse(),g=C.links(f);f.forEach(function(a){a.y=10*a.depth*r}),node=J.selectAll("g.node").data(f,function(a){return a.id||(a.id=++w)});var h=node.enter().append("g").call(dragListener).attr("class","node").attr("transform",function(){return"translate("+a.y0+","+a.x0+")"}).on("click",m).attr("data-fullname",function(a){return a.fullname}).attr("data-title",function(a){return a.title});h.append("image").attr("class","nodeCircle").attr("xlink:href","thumb.png").attr("width",40).attr("height",40).attr("x",-40).attr("y",-20).attr("border","1px"),h.append("text").attr("y",function(a){return a.children||a._children?-10:30}).attr("y","30").attr("class","nodeText").attr("text-anchor",function(a){return a.children||a._children?"end":"start"}).text(function(a){return a.displayname+" / "+a.title}).style("fill-opacity",0),h.append("circle").attr("class","ghostCircle").attr("r",20).attr("opacity",.2).style("fill","red").attr("pointer-events","mouseover").on("mouseover",function(a){G(a)}).on("mouseout",function(a){H(a)}),node.select("text").attr("x",function(){return-20}).attr("text-anchor",function(a){return a.children||a._children?"end":"start"}).text(function(a){return a.displayname+" / "+a.title}).style("text-anchor","middle"),node.select("circle.nodeCircle").attr("r",4.5).style("fill",function(a){return a._children?"lightsteelblue":"#fff"});var i=node.transition().duration(z).attr("transform",function(a){return"translate("+a.y+","+a.x+")"});i.select("text").style("fill-opacity",1);var j=node.exit().transition().duration(z).attr("transform",function(){return"translate("+a.y+","+a.x+")"}).remove();j.select("circle").attr("r",0),j.select("text").style("fill-opacity",0);var k=J.selectAll("path.link").data(g,function(a){return a.target.id});k.enter().insert("path","g").attr("class","link").attr("d",function(){var b={"x":a.x0,"y":a.y0};return D({"source":b,"target":b})}),k.transition().duration(z).attr("d",D),k.exit().transition().duration(z).attr("d",function(){var b={"x":a.x,"y":a.y};return D({"source":b,"target":b})}).remove(),f.forEach(function(a){a.x0=a.x,a.y0=a.y})}var p,q=0,r=0,s=null,t=null,u=200,v=20,w=0,z=750,A=$(document).width(),B=$(document).height(),C=d3.layout.tree().size([B,A]),D=d3.svg.diagonal().projection(function(a){return[a.y,a.x]});d(b,function(a){q++,r=Math.max(a.displayname.length,r)},function(a){return a.children&&a.children.length>0?a.children:null}),e();var E=d3.behavior.zoom().scaleExtent([.1,3]).on("zoom",g),F=d3.select("#tree-container").append("svg").attr("width",A).attr("height",B).attr("class","overlay").call(E);dragListener=d3.behavior.drag().on("dragstart",function(a){a!=p&&(dragStarted=!0,nodes=C.nodes(a),d3.event.sourceEvent.stopPropagation())}).on("drag",function(a){if(a!=p){if(dragStarted&&(domNode=this,h(a,domNode)),relCoords=d3.mouse($("svg").get(0)),relCoords[0]<v)panTimer=!0,f(this,"left");else if(relCoords[0]>$("svg").width()-v)panTimer=!0,f(this,"right");else if(relCoords[1]<v)panTimer=!0,f(this,"up");else if(relCoords[1]>$("svg").height()-v)panTimer=!0,f(this,"down");else try{clearTimeout(panTimer)}catch(b){}a.x0+=d3.event.dy,a.y0+=d3.event.dx;var c=d3.select(this);c.attr("transform","translate("+a.y0+","+a.x0+")"),I()}}).on("dragend",function(a){if(a!=p)if(domNode=this,s){var b=t.parent.children.indexOf(t);b>-1&&t.parent.children.splice(b,1),"undefined"!=typeof s.children||"undefined"!=typeof s._children?"undefined"!=typeof s.children?s.children.push(t):s._children.push(t):(s.children=[],s.children.push(t)),j(s),e(),i()}else i()});var G=function(a){s=a,I()},H=function(){s=null,I()},I=function(){var a=[];null!==t&&null!==s&&(a=[{"source":{"x":s.y0,"y":s.x0},"target":{"x":t.y0,"y":t.x0}}]);var b=J.selectAll(".templink").data(a);b.enter().append("path").attr("class","templink").attr("d",d3.svg.diagonal()).attr("pointer-events","none"),b.attr("d",d3.svg.diagonal()),b.exit().remove()},J=F.append("g");p=b,p.x0=B/2,p.y0=0,o(p,!0),k(p),n(),c()}),$(document).ready(function(){$("#closePopUp").click(function(){$("#popoverRollIn").addClass("hide")})})});
+// Get JSON data
+setTimeout(function(){
+
+treeJSON = d3.json("plugin/dndTree/flare.json", function(error, treeData) {
+
+    // Calculate total nodes, max label length
+    var totalNodes = 0;
+    var maxLabelLength = 0;
+    // variables for drag/drop
+    var selectedNode = null;
+    var draggingNode = null;
+    // panning variables
+    var panSpeed = 200;
+    var panBoundary = 20; // Within 20px from edges will pan when dragging.
+    // Misc. variables
+    var i = 0;
+    var duration = 750;
+    var root;
+
+    // size of the diagram
+    var viewerWidth = $(".tab-pane.active").width();
+    var viewerHeight = 550;
+
+    var tree = d3.layout.tree()
+        .size([viewerHeight, viewerWidth]);
+
+    // define a d3 diagonal projection for use by the node paths later on.
+    var diagonal = d3.svg.diagonal()
+        .projection(function(d) {
+            return [d.y, d.x];
+        });
+
+    function createNav(){
+
+        $(function(){
+            $.contextMenu({
+                selector: '.node image', 
+                callback: function(key, options) {
+                    $("#popoverRollIn").removeClass("hide");
+                    $("#popOverIn").css("top", $(this).position().top - ($("#popoverRollIn #popOverIn").height()/2) + 18);
+                    $("#popOverIn").css("left", $(this).position().left - $("#popoverRollIn #popOverIn").width() - 5);
+                    $("#fullNameProfilePop").text($(this).closest(".node").data().fullname + " - " + $(this).closest(".node").data().title);
+                },
+                items: {
+                    "view": {name: "View Profile"},
+                    "expand": {name: "Expand"},
+                    "sep1": "---------",
+                    "quit": {name: "Close this menu"}
+                }
+            });
+             
+        });
+            
+    }
+    // A recursive helper function for performing some setup by walking through all nodes
+
+    function visit(parent, visitFn, childrenFn) {
+        if (!parent) return;
+
+        visitFn(parent);
+
+        var children = childrenFn(parent);
+        if (children) {
+            var count = children.length;
+            for (var i = 0; i < count; i++) {
+                visit(children[i], visitFn, childrenFn);
+            }
+        }
+    }
+
+    // Call visit function to establish maxLabelLength
+    visit(treeData, function(d) {
+        totalNodes++;
+        maxLabelLength = Math.max(d.displayname.length, maxLabelLength);
+
+    }, function(d) {
+        return d.children && d.children.length > 0 ? d.children : null;
+    });
+
+
+    // sort the tree according to the node names
+
+    function sortTree() {
+        tree.sort(function(a, b) {
+            return b.displayname.toLowerCase() < a.displayname.toLowerCase() ? 1 : -1;
+        });
+    }
+    // Sort the tree initially incase the JSON isn't in a sorted order.
+    sortTree();
+
+    // TODO: Pan function, can be better implemented.
+
+    function pan(domNode, direction) {
+        var speed = panSpeed;
+        if (panTimer) {
+            clearTimeout(panTimer);
+            translateCoords = d3.transform(svgGroup.attr("transform"));
+            if (direction == 'left' || direction == 'right') {
+                translateX = direction == 'left' ? translateCoords.translate[0] + speed : translateCoords.translate[0] - speed;
+                translateY = translateCoords.translate[1];
+            } else if (direction == 'up' || direction == 'down') {
+                translateX = translateCoords.translate[0];
+                translateY = direction == 'up' ? translateCoords.translate[1] + speed : translateCoords.translate[1] - speed;
+            }
+            scaleX = translateCoords.scale[0];
+            scaleY = translateCoords.scale[1];
+            scale = zoomListener.scale();
+            svgGroup.transition().attr("transform", "translate(" + translateX + "," + translateY + ")scale(" + scale + ")");
+            d3.select(domNode).select('g.node').attr("transform", "translate(" + translateX + "," + translateY + ")");
+            zoomListener.scale(zoomListener.scale());
+            zoomListener.translate([translateX, translateY]);
+            panTimer = setTimeout(function() {
+                pan(domNode, speed, direction);
+            }, 50);
+        }
+    }
+
+    // Define the zoom function for the zoomable tree
+
+    function zoom() {
+        svgGroup.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
+
+
+    // define the zoomListener which calls the zoom function on the "zoom" event constrained within the scaleExtents
+    var zoomListener = d3.behavior.zoom().scaleExtent([0.1, 3]).on("zoom", zoom);
+
+    function initiateDrag(d, domNode) {
+        draggingNode = d;
+        d3.select(domNode).select('.ghostCircle').attr('pointer-events', 'none');
+        d3.selectAll('.ghostCircle').attr('class', 'ghostCircle show');
+        d3.select(domNode).attr('class', 'node activeDrag');
+
+        svgGroup.selectAll("g.node").sort(function(a, b) { // select the parent and sort the path's
+            if (a.id != draggingNode.id) return 1; // a is not the hovered element, send "a" to the back
+            else return -1; // a is the hovered element, bring "a" to the front
+        });
+        // if nodes has children, remove the links and nodes
+        if (nodes.length > 1) {
+            // remove link paths
+            links = tree.links(nodes);
+            nodePaths = svgGroup.selectAll("path.link")
+                .data(links, function(d) {
+                    return d.target.id;
+                }).remove();
+            // remove child nodes
+            nodesExit = svgGroup.selectAll("g.node")
+                .data(nodes, function(d) {
+                    return d.id;
+                }).filter(function(d, i) {
+                    if (d.id == draggingNode.id) {
+                        return false;
+                    }
+                    return true;
+                }).remove();
+        }
+
+        // remove parent link
+        parentLink = tree.links(tree.nodes(draggingNode.parent));
+        svgGroup.selectAll('path.link').filter(function(d, i) {
+            if (d.target.id == draggingNode.id) {
+                return true;
+            }
+            return false;
+        }).remove();
+
+        dragStarted = null;
+    }
+
+    // define the baseSvg, attaching a class for styling and the zoomListener
+    var baseSvg = d3.select("#tree-container").append("svg")
+        .attr("width", viewerWidth)
+        .attr("height", viewerHeight)
+        .attr("class", "overlay")
+        .call(zoomListener);
+
+
+    // Define the drag listeners for drag/drop behaviour of nodes.
+    dragListener = d3.behavior.drag()
+        .on("dragstart", function(d) {
+            if (d == root) {
+                return;
+            }
+            dragStarted = true;
+            nodes = tree.nodes(d);
+            d3.event.sourceEvent.stopPropagation();
+            // it's important that we suppress the mouseover event on the node being dragged. Otherwise it will absorb the mouseover event and the underlying node will not detect it d3.select(this).attr('pointer-events', 'none');
+        })
+        .on("drag", function(d) {
+            if (d == root) {
+                return;
+            }
+            if (dragStarted) {
+                domNode = this;
+                initiateDrag(d, domNode);
+            }
+
+            // get coords of mouseEvent relative to svg container to allow for panning
+            relCoords = d3.mouse($('svg').get(0));
+            if (relCoords[0] < panBoundary) {
+                panTimer = true;
+                pan(this, 'left');
+            } else if (relCoords[0] > ($('svg').width() - panBoundary)) {
+
+                panTimer = true;
+                pan(this, 'right');
+            } else if (relCoords[1] < panBoundary) {
+                panTimer = true;
+                pan(this, 'up');
+            } else if (relCoords[1] > ($('svg').height() - panBoundary)) {
+                panTimer = true;
+                pan(this, 'down');
+            } else {
+                try {
+                    clearTimeout(panTimer);
+                } catch (e) {
+
+                }
+            }
+
+            d.x0 += d3.event.dy;
+            d.y0 += d3.event.dx;
+            var node = d3.select(this);
+            node.attr("transform", "translate(" + d.y0 + "," + d.x0 + ")");
+            updateTempConnector();
+        }).on("dragend", function(d) {
+            if (d == root) {
+                return;
+            }
+            domNode = this;
+            if (selectedNode) {
+                // now remove the element from the parent, and insert it into the new elements children
+                var index = draggingNode.parent.children.indexOf(draggingNode);
+                if (index > -1) {
+                    draggingNode.parent.children.splice(index, 1);
+                }
+                if (typeof selectedNode.children !== 'undefined' || typeof selectedNode._children !== 'undefined') {
+                    if (typeof selectedNode.children !== 'undefined') {
+                        selectedNode.children.push(draggingNode);
+                    } else {
+                        selectedNode._children.push(draggingNode);
+                    }
+                } else {
+                    selectedNode.children = [];
+                    selectedNode.children.push(draggingNode);
+                }
+                // Make sure that the node being added to is expanded so user can see added node is correctly moved
+                expand(selectedNode);
+                sortTree();
+                endDrag();
+            } else {
+                endDrag();
+            }
+        });
+
+    function endDrag() {
+        selectedNode = null;
+        d3.selectAll('.ghostCircle').attr('class', 'ghostCircle');
+        d3.select(domNode).attr('class', 'node');
+        // now restore the mouseover event or we won't be able to drag a 2nd time
+        d3.select(domNode).select('.ghostCircle').attr('pointer-events', '');
+        updateTempConnector();
+        if (draggingNode !== null) {
+            update(root);
+            centerNode(draggingNode);
+            draggingNode = null;
+        }
+    }
+
+    // Helper functions for collapsing and expanding nodes.
+
+    function collapse(d) {
+        if (d.children) {
+            d._children = d.children;
+            d._children.forEach(collapse);
+            d.children = null;
+        }
+    }
+
+    function expand(d) {
+        if (d._children) {
+            d.children = d._children;
+            d.children.forEach(expand);
+            d._children = null;
+        }
+    }
+
+    var overCircle = function(d) {
+        selectedNode = d;
+        updateTempConnector();
+    };
+    var outCircle = function(d) {
+        selectedNode = null;
+        updateTempConnector();
+    };
+
+    // Function to update the temporary connector indicating dragging affiliation
+    var updateTempConnector = function() {
+        var data = [];
+        if (draggingNode !== null && selectedNode !== null) {
+            // have to flip the source coordinates since we did this for the existing connectors on the original tree
+            data = [{
+                source: {
+                    x: selectedNode.y0,
+                    y: selectedNode.x0
+                },
+                target: {
+                    x: draggingNode.y0,
+                    y: draggingNode.x0
+                }
+            }];
+        }
+        var link = svgGroup.selectAll(".templink").data(data);
+
+        link.enter().append("path")
+            .attr("class", "templink")
+            .attr("d", d3.svg.diagonal())
+            .attr('pointer-events', 'none');
+
+        link.attr("d", d3.svg.diagonal());
+
+        link.exit().remove();
+    };
+
+    // Function to center node when clicked/dropped so node doesn't get lost when collapsing/moving with large amount of children.
+
+    function centerNode(source) {
+        scale = zoomListener.scale();
+        x = -source.y0;
+        y = -source.x0;
+        x = x * scale + viewerWidth / 2;
+        y = y * scale + viewerHeight / 2;
+        d3.select('g').transition()
+            .duration(duration)
+            .attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
+        zoomListener.scale(scale);
+        zoomListener.translate([x, y]);
+    }
+
+    // Toggle children function
+
+    function toggleChildren(d) {
+        if (d.children) {
+            d._children = d.children;
+            d.children = null;
+        } else if (d._children) {
+            d.children = d._children;
+            d._children = null;
+        }
+        return d;
+    }
+
+    // Toggle children on click.
+
+    function click(d) {
+        if (d3.event.defaultPrevented) return; // click suppressed
+        d = toggleChildren(d);
+            
+        if (d.children !== null && d.children !== undefined){
+            for (var i = 0; i < d.children.length; i++){
+                if (d.children[i].children !== null && d.children[i].children !== undefined){
+                    d.children[i] = toggleChildren(d.children[i]);
+                }
+
+            }
+        }
+        update(d);
+        centerNode(d);
+    }
+
+    function setPopUp(){
+        $("#popoverRollIn").each(function(){
+            $(this).mouseover(function(){
+
+            });
+        });
+    }
+
+    function update(source, doToggle) {
+        // Compute the new height, function counts total children of root node and sets tree height accordingly.
+        // This prevents the layout looking squashed when new nodes are made visible or looking sparse when nodes are removed
+        // This makes the layout more consistent.
+        var levelWidth = [1];
+        var childCount = function(level, n) {
+
+            if (n.children && n.children.length > 0) {
+                if (levelWidth.length <= level + 1) levelWidth.push(0);
+
+                levelWidth[level + 1] += n.children.length;
+                n.children.forEach(function(d) {
+                    childCount(level + 1, d);
+                });
+            }
+        };
+        childCount(0, root);
+        var newHeight = d3.max(levelWidth) * 125; // 25 pixels per line  
+        tree = tree.size([newHeight, viewerWidth]);
+
+        if (doToggle){
+            root = toggleChildren(root);
+        }
+        // Compute the new tree layout.
+        var nodes = tree.nodes(root).reverse(),
+            links = tree.links(nodes);
+
+        // Set widths between levels based on maxLabelLength.
+        nodes.forEach(function(d) {
+            d.y = (d.depth * (maxLabelLength * 10)); //maxLabelLength * 10px
+            // alternatively to keep a fixed scale one can set a fixed depth per level
+            // Normalize for fixed-depth by commenting out below line
+            // d.y = (d.depth * 500); //500px per level.
+        });
+
+        // Update the nodes…
+        node = svgGroup.selectAll("g.node")
+            .data(nodes, function(d) {
+                return d.id || (d.id = ++i);
+            });
+
+        // Enter any new nodes at the parent's previous position.
+        var nodeEnter = node.enter().append("g")
+            .call(dragListener)
+            .attr("class", "node")
+            .attr("transform", function(d) {
+                return "translate(" + source.y0 + "," + source.x0 + ")";
+            })
+            .on('click', click)
+            .attr("data-fullname", function(d){
+                return d.fullname;
+            })
+            .attr("data-title", function(d){
+                return d.title;
+            });
+
+        nodeEnter.append("image")
+            .attr('class', 'nodeCircle')
+            .attr("xlink:href", "thumb.png")
+            .attr("width", 40)
+            .attr("height", 40)
+            .attr("x", -40)
+            .attr("y", -20)
+            .attr("border", "1px");
+
+        nodeEnter.append("text")
+            .attr("y", function(d) {
+                return d.children || d._children ? -10 : 30;
+            })
+            .attr("y", "30")
+            .attr('class', 'nodeText')
+            .attr("text-anchor", function(d) {
+                return d.children || d._children ? "end" : "start";
+            })
+            .text(function(d) {
+                return d.displayname + " / " + d.title;
+            })
+            .style("fill-opacity", 0);
+
+        // phantom node to give us mouseover in a radius around it
+        nodeEnter.append("circle")
+            .attr('class', 'ghostCircle')
+            .attr("r", 20)
+            .attr("opacity", 0.2) // change this to zero to hide the target area
+        .style("fill", "red")
+            .attr('pointer-events', 'mouseover')
+            .on("mouseover", function(node) {
+                overCircle(node);
+            })
+            .on("mouseout", function(node) {
+                outCircle(node);
+            });
+
+        // Update the text to reflect whether node has children or not.
+        node.select('text')
+            .attr("x", function(d) {
+                return -20;//($(".nodeText").width()/2 * -2);
+            })
+            .attr("text-anchor", function(d) {
+                return d.children || d._children ? "end" : "start";
+            })
+            .text(function(d) {
+                return d.displayname + " / " + d.title;
+            })
+            .style("text-anchor", "middle");
+
+        // Change the circle fill depending on whether it has children and is collapsed
+        node.select("circle.nodeCircle")
+            .attr("r", 4.5)
+            .style("fill", function(d) {
+                return d._children ? "lightsteelblue" : "#fff";
+            });
+
+        // Transition nodes to their new position.
+        var nodeUpdate = node.transition()
+            .duration(duration)
+            .attr("transform", function(d) {
+                return "translate(" + d.y + "," + d.x + ")";
+            });
+
+        // Fade the text in
+        nodeUpdate.select("text")
+            .style("fill-opacity", 1);
+
+        // Transition exiting nodes to the parent's new position.
+        var nodeExit = node.exit().transition()
+            .duration(duration)
+            .attr("transform", function(d) {
+                return "translate(" + source.y + "," + source.x + ")";
+            })
+            .remove();
+
+        nodeExit.select("circle")
+            .attr("r", 0);
+
+        nodeExit.select("text")
+            .style("fill-opacity", 0);
+
+        // Update the links…
+        var link = svgGroup.selectAll("path.link")
+            .data(links, function(d) {
+                return d.target.id;
+            });
+
+        // Enter any new links at the parent's previous position.
+        link.enter().insert("path", "g")
+            .attr("class", "link")
+            .attr("d", function(d) {
+                var o = {
+                    x: source.x0,
+                    y: source.y0
+                };
+                return diagonal({
+                    source: o,
+                    target: o
+                });
+            });
+
+        // Transition links to their new position.
+        link.transition()
+            .duration(duration)
+            .attr("d", diagonal);
+
+        // Transition exiting nodes to the parent's new position.
+        link.exit().transition()
+            .duration(duration)
+            .attr("d", function(d) {
+                var o = {
+                    x: source.x,
+                    y: source.y
+                };
+                return diagonal({
+                    source: o,
+                    target: o
+                });
+            })
+            .remove();
+
+        // Stash the old positions for transition.
+        nodes.forEach(function(d) {
+            d.x0 = d.x;
+            d.y0 = d.y;
+        });
+    }
+
+    // Append a group which holds all nodes and which the zoom Listener can act upon.
+    var svgGroup = baseSvg.append("g");
+
+    // Define the root
+    root = treeData;
+    root.x0 = viewerHeight / 2;
+    root.y0 = 0;
+
+    // Layout the tree initially and center on the root node.
+    update(root, true);
+    centerNode(root);
+    setPopUp();
+    createNav();
+});
+
+$(document).ready(function(){
+    $("#closePopUp").click(function(){
+        $("#popoverRollIn").addClass("hide");
+    });
+});
+
+}, 1000);
 define("dndTree", ["d3js","jquery"], function(){});
 
 /*! SmartAdmin - v1.5.2 - 2015-04-16 */!function(a,b){function c(a){for(var b,c=a.split(/\s+/),d=[],e=0;b=c[e];e++)b=b.charAt(0).toUpperCase(),d.push(b);return d}function d(b){return b.id&&a('label[for="'+b.id+'"]').val()||b.name}function e(c,f,g){return g||(g=0),f.each(function(){var f,h,i=a(this),j=this,k=this.nodeName.toLowerCase();switch("label"==k&&i.find("input, textarea, select").length&&(f=i.text(),i=i.children().first(),j=i.get(0),k=j.nodeName.toLowerCase()),k){case"menu":h={"name":i.attr("label"),"items":{}},g=e(h.items,i.children(),g);break;case"a":case"button":h={"name":i.text(),"disabled":!!i.attr("disabled"),"callback":function(){return function(){i.click()}}()};break;case"menuitem":case"command":switch(i.attr("type")){case b:case"command":case"menuitem":h={"name":i.attr("label"),"disabled":!!i.attr("disabled"),"callback":function(){return function(){i.click()}}()};break;case"checkbox":h={"type":"checkbox","disabled":!!i.attr("disabled"),"name":i.attr("label"),"selected":!!i.attr("checked")};break;case"radio":h={"type":"radio","disabled":!!i.attr("disabled"),"name":i.attr("label"),"radio":i.attr("radiogroup"),"value":i.attr("id"),"selected":!!i.attr("checked")};break;default:h=b}break;case"hr":h="-------";break;case"input":switch(i.attr("type")){case"text":h={"type":"text","name":f||d(j),"disabled":!!i.attr("disabled"),"value":i.val()};break;case"checkbox":h={"type":"checkbox","name":f||d(j),"disabled":!!i.attr("disabled"),"selected":!!i.attr("checked")};break;case"radio":h={"type":"radio","name":f||d(j),"disabled":!!i.attr("disabled"),"radio":!!i.attr("name"),"value":i.val(),"selected":!!i.attr("checked")};break;default:h=b}break;case"select":h={"type":"select","name":f||d(j),"disabled":!!i.attr("disabled"),"selected":i.val(),"options":{}},i.children().each(function(){h.options[this.value]=a(this).text()});break;case"textarea":h={"type":"textarea","name":f||d(j),"disabled":!!i.attr("disabled"),"value":i.val()};break;case"label":break;default:h={"type":"html","html":i.clone(!0)}}h&&(g++,c["key"+g]=h)}),g}if(a.support.htmlMenuitem="HTMLMenuItemElement"in window,a.support.htmlCommand="HTMLCommandElement"in window,a.support.eventSelectstart="onselectstart"in document.documentElement,!a.ui||!a.ui.widget){var f=a.cleanData;a.cleanData=function(b){for(var c,d=0;null!=(c=b[d]);d++)try{a(c).triggerHandler("remove")}catch(e){}f(b)}}var g=null,h=!1,i=a(window),j=0,k={},l={},m={},n={"selector":null,"appendTo":null,"trigger":"right","autoHide":!1,"delay":200,"reposition":!0,"determinePosition":function(b){if(a.ui&&a.ui.position)b.css("display","block").position({"my":"center top","at":"center bottom","of":this,"offset":"0 5","collision":"fit"}).css("display","none");else{var c=this.offset();c.top+=this.outerHeight(),c.left+=this.outerWidth()/2-b.outerWidth()/2,b.css(c)}},"position":function(a,b,c){var d;if(!b&&!c)return void a.determinePosition.call(this,a.$menu);d="maintain"===b&&"maintain"===c?a.$menu.position():{"top":c,"left":b};var e=i.scrollTop()+i.height(),f=i.scrollLeft()+i.width(),g=a.$menu.height(),h=a.$menu.width();d.top+g>e&&(d.top-=g),d.top<0&&(d.top=0),d.left+h>f&&(d.left-=h),a.$menu.css(d)},"positionSubmenu":function(b){if(a.ui&&a.ui.position)b.css("display","block").position({"my":"left top","at":"right top","of":this,"collision":"flipfit fit"}).css("display","");else{var c={"top":0,"left":this.outerWidth()};b.css(c)}},"zIndex":1,"animation":{"duration":50,"show":"slideDown","hide":"slideUp"},"events":{"show":a.noop,"hide":a.noop},"callback":null,"items":{}},o={"timer":null,"pageX":null,"pageY":null},p=function(a){for(var b=0,c=a;;)if(b=Math.max(b,parseInt(c.css("z-index"),10)||0),c=c.parent(),!c||!c.length||"html body".indexOf(c.prop("nodeName").toLowerCase())>-1)break;return b},q={"abortevent":function(a){a.preventDefault(),a.stopImmediatePropagation()},"contextmenu":function(b){var c=a(this);if("right"==b.data.trigger&&(b.preventDefault(),b.stopImmediatePropagation()),!("right"!=b.data.trigger&&b.originalEvent||c.hasClass("context-menu-active")||c.hasClass("context-menu-disabled"))){if(g=c,b.data.build){var d=b.data.build(g,b);if(d===!1)return;if(b.data=a.extend(!0,{},n,b.data,d||{}),!b.data.items||a.isEmptyObject(b.data.items))throw window.console&&(console.error||console.log).call(console,"No items specified to show in contextMenu"),new Error("No Items specified");b.data.$trigger=g,r.create(b.data)}r.show.call(c,b.data,b.pageX,b.pageY)}},"click":function(b){b.preventDefault(),b.stopImmediatePropagation(),a(this).trigger(a.Event("contextmenu",{"data":b.data,"pageX":b.pageX,"pageY":b.pageY}))},"mousedown":function(b){var c=a(this);g&&g.length&&!g.is(c)&&g.data("contextMenu").$menu.trigger("contextmenu:hide"),2==b.button&&(g=c.data("contextMenuActive",!0))},"mouseup":function(b){var c=a(this);c.data("contextMenuActive")&&g&&g.length&&g.is(c)&&!c.hasClass("context-menu-disabled")&&(b.preventDefault(),b.stopImmediatePropagation(),g=c,c.trigger(a.Event("contextmenu",{"data":b.data,"pageX":b.pageX,"pageY":b.pageY}))),c.removeData("contextMenuActive")},"mouseenter":function(b){var c=a(this),d=a(b.relatedTarget),e=a(document);d.is(".context-menu-list")||d.closest(".context-menu-list").length||g&&g.length||(o.pageX=b.pageX,o.pageY=b.pageY,o.data=b.data,e.on("mousemove.contextMenuShow",q.mousemove),o.timer=setTimeout(function(){o.timer=null,e.off("mousemove.contextMenuShow"),g=c,c.trigger(a.Event("contextmenu",{"data":o.data,"pageX":o.pageX,"pageY":o.pageY}))},b.data.delay))},"mousemove":function(a){o.pageX=a.pageX,o.pageY=a.pageY},"mouseleave":function(b){var c=a(b.relatedTarget);if(!c.is(".context-menu-list")&&!c.closest(".context-menu-list").length){try{clearTimeout(o.timer)}catch(b){}o.timer=null}},"layerClick":function(b){var c,d,e=a(this),f=e.data("contextMenuRoot"),g=b.button,h=b.pageX,j=b.pageY;b.preventDefault(),b.stopImmediatePropagation(),setTimeout(function(){var e,k="left"==f.trigger&&0===g||"right"==f.trigger&&2===g;if(document.elementFromPoint&&(f.$layer.hide(),c=document.elementFromPoint(h-i.scrollLeft(),j-i.scrollTop()),f.$layer.show()),f.reposition&&k)if(document.elementFromPoint){if(f.$trigger.is(c)||f.$trigger.has(c).length)return void f.position.call(f.$trigger,f,h,j)}else if(d=f.$trigger.offset(),e=a(window),d.top+=e.scrollTop(),d.top<=b.pageY&&(d.left+=e.scrollLeft(),d.left<=b.pageX&&(d.bottom=d.top+f.$trigger.outerHeight(),d.bottom>=b.pageY&&(d.right=d.left+f.$trigger.outerWidth(),d.right>=b.pageX))))return void f.position.call(f.$trigger,f,h,j);c&&k&&f.$trigger.one("contextmenu:hidden",function(){a(c).contextMenu({"x":h,"y":j})}),f.$menu.trigger("contextmenu:hide")},50)},"keyStop":function(a,b){b.isInput||a.preventDefault(),a.stopPropagation()},"key":function(a){var b={};switch(g&&(b=g.data("contextMenu")||{}),a.keyCode){case 9:case 38:if(q.keyStop(a,b),b.isInput){if(9==a.keyCode&&a.shiftKey)return a.preventDefault(),b.$selected&&b.$selected.find("input, textarea, select").blur(),void b.$menu.trigger("prevcommand");if(38==a.keyCode&&"checkbox"==b.$selected.find("input, textarea, select").prop("type"))return void a.preventDefault()}else if(9!=a.keyCode||a.shiftKey)return void b.$menu.trigger("prevcommand");case 40:if(q.keyStop(a,b),!b.isInput)return void b.$menu.trigger("nextcommand");if(9==a.keyCode)return a.preventDefault(),b.$selected&&b.$selected.find("input, textarea, select").blur(),void b.$menu.trigger("nextcommand");if(40==a.keyCode&&"checkbox"==b.$selected.find("input, textarea, select").prop("type"))return void a.preventDefault();break;case 37:if(q.keyStop(a,b),b.isInput||!b.$selected||!b.$selected.length)break;if(!b.$selected.parent().hasClass("context-menu-root")){var c=b.$selected.parent().parent();return b.$selected.trigger("contextmenu:blur"),void(b.$selected=c)}break;case 39:if(q.keyStop(a,b),b.isInput||!b.$selected||!b.$selected.length)break;var d=b.$selected.data("contextMenu")||{};if(d.$menu&&b.$selected.hasClass("context-menu-submenu"))return b.$selected=null,d.$selected=null,void d.$menu.trigger("nextcommand");break;case 35:case 36:return b.$selected&&b.$selected.find("input, textarea, select").length?void 0:((b.$selected&&b.$selected.parent()||b.$menu).children(":not(.disabled, .not-selectable)")[36==a.keyCode?"first":"last"]().trigger("contextmenu:focus"),void a.preventDefault());case 13:if(q.keyStop(a,b),b.isInput){if(b.$selected&&!b.$selected.is("textarea, select"))return void a.preventDefault();break}return void(b.$selected&&b.$selected.trigger("mouseup"));case 32:case 33:case 34:return void q.keyStop(a,b);case 27:return q.keyStop(a,b),void b.$menu.trigger("contextmenu:hide");default:var e=String.fromCharCode(a.keyCode).toUpperCase();if(b.accesskeys&&b.accesskeys[e])return void b.accesskeys[e].$node.trigger(b.accesskeys[e].$menu?"contextmenu:focus":"mouseup")}a.stopPropagation(),b.$selected&&b.$selected.trigger(a)},"prevItem":function(b){b.stopPropagation();var c=a(this).data("contextMenu")||{};if(c.$selected){var d=c.$selected;c=c.$selected.parent().data("contextMenu")||{},c.$selected=d}for(var e=c.$menu.children(),f=c.$selected&&c.$selected.prev().length?c.$selected.prev():e.last(),g=f;f.hasClass("disabled")||f.hasClass("not-selectable");)if(f=f.prev().length?f.prev():e.last(),f.is(g))return;c.$selected&&q.itemMouseleave.call(c.$selected.get(0),b),q.itemMouseenter.call(f.get(0),b);var h=f.find("input, textarea, select");h.length&&h.focus()},"nextItem":function(b){b.stopPropagation();var c=a(this).data("contextMenu")||{};if(c.$selected){var d=c.$selected;c=c.$selected.parent().data("contextMenu")||{},c.$selected=d}for(var e=c.$menu.children(),f=c.$selected&&c.$selected.next().length?c.$selected.next():e.first(),g=f;f.hasClass("disabled")||f.hasClass("not-selectable");)if(f=f.next().length?f.next():e.first(),f.is(g))return;c.$selected&&q.itemMouseleave.call(c.$selected.get(0),b),q.itemMouseenter.call(f.get(0),b);var h=f.find("input, textarea, select");h.length&&h.focus()},"focusInput":function(){var b=a(this).closest(".context-menu-item"),c=b.data(),d=c.contextMenu,e=c.contextMenuRoot;e.$selected=d.$selected=b,e.isInput=d.isInput=!0},"blurInput":function(){var b=a(this).closest(".context-menu-item"),c=b.data(),d=c.contextMenu,e=c.contextMenuRoot;e.isInput=d.isInput=!1},"menuMouseenter":function(){var b=a(this).data().contextMenuRoot;b.hovering=!0},"menuMouseleave":function(b){var c=a(this).data().contextMenuRoot;c.$layer&&c.$layer.is(b.relatedTarget)&&(c.hovering=!1)},"itemMouseenter":function(b){var c=a(this),d=c.data(),e=d.contextMenu,f=d.contextMenuRoot;return f.hovering=!0,b&&f.$layer&&f.$layer.is(b.relatedTarget)&&(b.preventDefault(),b.stopImmediatePropagation()),(e.$menu?e:f).$menu.children(".hover").trigger("contextmenu:blur"),c.hasClass("disabled")||c.hasClass("not-selectable")?void(e.$selected=null):void c.trigger("contextmenu:focus")},"itemMouseleave":function(b){var c=a(this),d=c.data(),e=d.contextMenu,f=d.contextMenuRoot;return f!==e&&f.$layer&&f.$layer.is(b.relatedTarget)?(f.$selected&&f.$selected.trigger("contextmenu:blur"),b.preventDefault(),b.stopImmediatePropagation(),void(f.$selected=e.$selected=e.$node)):void c.trigger("contextmenu:blur")},"itemClick":function(b){var c,d=a(this),e=d.data(),f=e.contextMenu,g=e.contextMenuRoot,h=e.contextMenuKey;if(f.items[h]&&!d.is(".disabled, .context-menu-submenu, .context-menu-separator, .not-selectable")){if(b.preventDefault(),b.stopImmediatePropagation(),a.isFunction(g.callbacks[h])&&Object.prototype.hasOwnProperty.call(g.callbacks,h))c=g.callbacks[h];else{if(!a.isFunction(g.callback))return;c=g.callback}c.call(g.$trigger,h,g)!==!1?g.$menu.trigger("contextmenu:hide"):g.$menu.parent().length&&r.update.call(g.$trigger,g)}},"inputClick":function(a){a.stopImmediatePropagation()},"hideMenu":function(b,c){var d=a(this).data("contextMenuRoot");r.hide.call(d.$trigger,d,c&&c.force)},"focusItem":function(b){b.stopPropagation();var c=a(this),d=c.data(),e=d.contextMenu,f=d.contextMenuRoot;c.addClass("hover").siblings(".hover").trigger("contextmenu:blur"),e.$selected=f.$selected=c,e.$node&&f.positionSubmenu.call(e.$node,e.$menu)},"blurItem":function(b){b.stopPropagation();var c=a(this),d=c.data(),e=d.contextMenu;c.removeClass("hover"),e.$selected=null}},r={"show":function(b,c,d){var e=a(this),f={};return a("#context-menu-layer").trigger("mousedown"),b.$trigger=e,b.events.show.call(e,b)===!1?void(g=null):(r.update.call(e,b),b.position.call(e,b,c,d),b.zIndex&&(f.zIndex=p(e)+b.zIndex),r.layer.call(b.$menu,b,f.zIndex),b.$menu.find("ul").css("zIndex",f.zIndex+1),b.$menu.css(f)[b.animation.show](b.animation.duration,function(){e.trigger("contextmenu:visible")}),e.data("contextMenu",b).addClass("context-menu-active"),a(document).off("keydown.contextMenu").on("keydown.contextMenu",q.key),void(b.autoHide&&a(document).on("mousemove.contextMenuAutoHide",function(a){var c=e.offset();c.right=c.left+e.outerWidth(),c.bottom=c.top+e.outerHeight(),!b.$layer||b.hovering||a.pageX>=c.left&&a.pageX<=c.right&&a.pageY>=c.top&&a.pageY<=c.bottom||b.$menu.trigger("contextmenu:hide")})))},"hide":function(c,d){var e=a(this);if(c||(c=e.data("contextMenu")||{}),d||!c.events||c.events.hide.call(e,c)!==!1){if(e.removeData("contextMenu").removeClass("context-menu-active"),c.$layer){setTimeout(function(a){return function(){a.remove()}}(c.$layer),10);try{delete c.$layer}catch(f){c.$layer=null}}g=null,c.$menu.find(".hover").trigger("contextmenu:blur"),c.$selected=null,a(document).off(".contextMenuAutoHide").off("keydown.contextMenu"),c.$menu&&c.$menu[c.animation.hide](c.animation.duration,function(){c.build&&(c.$menu.remove(),a.each(c,function(a){switch(a){case"ns":case"selector":case"build":case"trigger":return!0;default:c[a]=b;try{delete c[a]}catch(d){}return!0}})),setTimeout(function(){e.trigger("contextmenu:hidden")},10)})}},"create":function(d,e){e===b&&(e=d),d.$menu=a('<ul class="context-menu-list"></ul>').addClass(d.className||"").data({"contextMenu":d,"contextMenuRoot":e}),a.each(["callbacks","commands","inputs"],function(a,b){d[b]={},e[b]||(e[b]={})}),e.accesskeys||(e.accesskeys={}),a.each(d.items,function(b,f){var g=a('<li class="context-menu-item"></li>').addClass(f.className||""),h=null,i=null;if(g.on("click",a.noop),f.$node=g.data({"contextMenu":d,"contextMenuRoot":e,"contextMenuKey":b}),f.accesskey)for(var j,k=c(f.accesskey),l=0;j=k[l];l++)if(!e.accesskeys[j]){e.accesskeys[j]=f,f._name=f.name.replace(new RegExp("("+j+")","i"),'<span class="context-menu-accesskey">$1</span>');break}if("string"==typeof f)g.addClass("context-menu-separator not-selectable");else if(f.type&&m[f.type])m[f.type].call(g,f,d,e),a.each([d,e],function(c,d){d.commands[b]=f,a.isFunction(f.callback)&&(d.callbacks[b]=f.callback)});else{switch("html"==f.type?g.addClass("context-menu-html not-selectable"):f.type?(h=a("<label></label>").appendTo(g),a("<span></span>").text(f._name||f.name).appendTo(h),g.addClass("context-menu-input"),d.hasTypes=!0,a.each([d,e],function(a,c){c.commands[b]=f,c.inputs[b]=f})):f.items&&(f.type="sub"),f.type){case"text":i=a('<input type="text" value="1" name="" value="">').attr("name","context-menu-input-"+b).val(f.value||"").appendTo(h);break;case"textarea":i=a('<textarea name=""></textarea>').attr("name","context-menu-input-"+b).val(f.value||"").appendTo(h),f.height&&i.height(f.height);break;case"checkbox":i=a('<input type="checkbox" value="1" name="" value="">').attr("name","context-menu-input-"+b).val(f.value||"").prop("checked",!!f.selected).prependTo(h);break;case"radio":i=a('<input type="radio" value="1" name="" value="">').attr("name","context-menu-input-"+f.radio).val(f.value||"").prop("checked",!!f.selected).prependTo(h);break;case"select":i=a('<select name="">').attr("name","context-menu-input-"+b).appendTo(h),f.options&&(a.each(f.options,function(b,c){a("<option></option>").val(b).text(c).appendTo(i)}),i.val(f.selected));break;case"sub":a("<span></span>").text(f._name||f.name).appendTo(g),f.appendTo=f.$node,r.create(f,e),g.data("contextMenu",f).addClass("context-menu-submenu"),f.callback=null;break;case"html":a(f.html).appendTo(g);break;default:a.each([d,e],function(c,d){d.commands[b]=f,a.isFunction(f.callback)&&(d.callbacks[b]=f.callback)}),a("<span></span>").text(f._name||f.name||"").appendTo(g)}f.type&&"sub"!=f.type&&"html"!=f.type&&(i.on("focus",q.focusInput).on("blur",q.blurInput),f.events&&i.on(f.events,d)),f.icon&&g.addClass("icon icon-"+f.icon)}f.$input=i,f.$label=h,g.appendTo(d.$menu),!d.hasTypes&&a.support.eventSelectstart&&g.on("selectstart.disableTextSelect",q.abortevent)}),d.$node||d.$menu.css("display","none").addClass("context-menu-root"),d.$menu.appendTo(d.appendTo||document.body)},"resize":function(b,c){b.css({"position":"absolute","display":"block"}),b.data("width",Math.ceil(b.width())+1),b.css({"position":"static","minWidth":"0px","maxWidth":"100000px"}),b.find("> li > ul").each(function(){r.resize(a(this),!0)}),c||b.find("ul").addBack().css({"position":"","display":"","minWidth":"","maxWidth":""}).width(function(){return a(this).data("width")})},"update":function(c,d){var e=this;d===b&&(d=c,r.resize(c.$menu)),c.$menu.children().each(function(){var b=a(this),f=b.data("contextMenuKey"),g=c.items[f],h=a.isFunction(g.disabled)&&g.disabled.call(e,f,d)||g.disabled===!0;if(b[h?"addClass":"removeClass"]("disabled"),g.type)switch(b.find("input, select, textarea").prop("disabled",h),g.type){case"text":case"textarea":g.$input.val(g.value||"");break;case"checkbox":case"radio":g.$input.val(g.value||"").prop("checked",!!g.selected);break;case"select":g.$input.val(g.selected||"")}g.$menu&&r.update.call(e,g,d)})},"layer":function(c,d){var e=c.$layer=a('<div id="context-menu-layer" style="position:fixed; z-index:'+d+'; top:0; left:0; opacity: 0; filter: alpha(opacity=0); background-color: #000;"></div>').css({"height":i.height(),"width":i.width(),"display":"block"}).data("contextMenuRoot",c).insertBefore(this).on("contextmenu",q.abortevent).on("mousedown",q.layerClick);return document.body.style.maxWidth===b&&e.css({"position":"absolute","height":a(document).height()}),e}};a.fn.contextMenu=function(c){if(c===b)this.first().trigger("contextmenu");else if(c.x&&c.y)this.first().trigger(a.Event("contextmenu",{"pageX":c.x,"pageY":c.y}));else if("hide"===c){var d=this.first().data("contextMenu")?this.first().data("contextMenu").$menu:null;d&&d.trigger("contextmenu:hide")}else"destroy"===c?a.contextMenu("destroy",{"context":this}):a.isPlainObject(c)?(c.context=this,a.contextMenu("create",c)):c?this.removeClass("context-menu-disabled"):c||this.addClass("context-menu-disabled");return this},a.contextMenu=function(c,d){"string"!=typeof c&&(d=c,c="create"),"string"==typeof d?d={"selector":d}:d===b&&(d={});var e=a.extend(!0,{},n,d||{}),f=a(document),g=f,i=!1;switch(e.context&&e.context.length?(g=a(e.context).first(),e.context=g.get(0),i=e.context!==document):e.context=document,c){case"create":if(!e.selector)throw new Error("No selector specified");if(e.selector.match(/.context-menu-(list|item|input)($|\s)/))throw new Error('Cannot bind to selector "'+e.selector+'" as it contains a reserved className');if(!e.build&&(!e.items||a.isEmptyObject(e.items)))throw new Error("No Items specified");switch(j++,e.ns=".contextMenu"+j,i||(k[e.selector]=e.ns),l[e.ns]=e,e.trigger||(e.trigger="right"),h||(f.on({"contextmenu:hide.contextMenu":q.hideMenu,"prevcommand.contextMenu":q.prevItem,"nextcommand.contextMenu":q.nextItem,"contextmenu.contextMenu":q.abortevent,"mouseenter.contextMenu":q.menuMouseenter,"mouseleave.contextMenu":q.menuMouseleave},".context-menu-list").on("mouseup.contextMenu",".context-menu-input",q.inputClick).on({"mouseup.contextMenu":q.itemClick,"contextmenu:focus.contextMenu":q.focusItem,"contextmenu:blur.contextMenu":q.blurItem,"contextmenu.contextMenu":q.abortevent,"mouseenter.contextMenu":q.itemMouseenter,"mouseleave.contextMenu":q.itemMouseleave},".context-menu-item"),h=!0),g.on("contextmenu"+e.ns,e.selector,e,q.contextmenu),i&&g.on("remove"+e.ns,function(){a(this).contextMenu("destroy")}),e.trigger){case"hover":g.on("mouseenter"+e.ns,e.selector,e,q.mouseenter).on("mouseleave"+e.ns,e.selector,e,q.mouseleave);break;case"left":g.on("click"+e.ns,e.selector,e,q.click)}e.build||r.create(e);break;case"destroy":var m;if(i){var o=e.context;a.each(l,function(b,c){if(c.context!==o)return!0;m=a(".context-menu-list").filter(":visible"),m.length&&m.data().contextMenuRoot.$trigger.is(a(c.context).find(c.selector))&&m.trigger("contextmenu:hide",{"force":!0});try{l[c.ns].$menu&&l[c.ns].$menu.remove(),delete l[c.ns]}catch(d){l[c.ns]=null}return a(c.context).off(c.ns),!0})}else if(e.selector){if(k[e.selector]){m=a(".context-menu-list").filter(":visible"),m.length&&m.data().contextMenuRoot.$trigger.is(e.selector)&&m.trigger("contextmenu:hide",{"force":!0});try{l[k[e.selector]].$menu&&l[k[e.selector]].$menu.remove(),delete l[k[e.selector]]}catch(p){l[k[e.selector]]=null}f.off(k[e.selector])}}else f.off(".contextMenu .contextMenuAutoHide"),a.each(l,function(b,c){a(c.context).off(c.ns)}),k={},l={},j=0,h=!1,a("#context-menu-layer, .context-menu-list").remove();break;case"html5":(!a.support.htmlCommand&&!a.support.htmlMenuitem||"boolean"==typeof d&&d)&&a('menu[type="context"]').each(function(){this.id&&a.contextMenu({"selector":"[contextmenu="+this.id+"]","items":a.contextMenu.fromMenu(this)})}).css("display","none");break;default:throw new Error('Unknown operation "'+c+'"')}return this},a.contextMenu.setInputValues=function(c,d){d===b&&(d={}),a.each(c.inputs,function(a,b){switch(b.type){case"text":case"textarea":b.value=d[a]||"";break;case"checkbox":b.selected=d[a]?!0:!1;break;case"radio":b.selected=(d[b.radio]||"")==b.value?!0:!1;break;case"select":b.selected=d[a]||""}})},a.contextMenu.getInputValues=function(c,d){return d===b&&(d={}),a.each(c.inputs,function(a,b){switch(b.type){case"text":case"textarea":case"select":d[a]=b.$input.val();break;case"checkbox":d[a]=b.$input.prop("checked");break;case"radio":b.$input.prop("checked")&&(d[b.radio]=b.value)}}),d},a.contextMenu.fromMenu=function(b){var c=a(b),d={};return e(d,c.children()),d},a.contextMenu.defaults=n,a.contextMenu.types=m,a.contextMenu.handle=q,a.contextMenu.op=r,a.contextMenu.menus=l}(jQuery);
