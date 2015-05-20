@@ -12,18 +12,28 @@ define(['modules/graphs/module', 'morris'], function(module){
                 Morris.Donut({
                     element : element,
                     data : [{
-                        value : 70,
-                        label : 'foo'
+                        value : 30,
+                        label : 'Innovation',
                     }, {
-                        value : 15,
-                        label : 'bar'
+                        value : 35,
+                        label : 'Client Care'
                     }, {
-                        value : 10,
-                        label : 'baz'
+                        value : 25,
+                        label : 'Operational Excelence'
                     }, {
                         value : 5,
-                        label : 'A really really long label'
+                        label : 'Integrity'
+                    }, {
+                        value : 5,
+                        label : 'Deliver the difference'
                     }],
+                    colors: [
+                        '#900323',
+                        '#39B580',
+                        '#064145',
+                        '#808080',
+                        '#95A7BB'
+                      ],
                     formatter : function(x) {
                         return x + "%"
                     }

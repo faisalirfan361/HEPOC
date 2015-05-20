@@ -8,13 +8,13 @@ define(['modules/graphs/module', 'chartjs'], function (module) {
             link: function (scope, element, attributes) {
                 var doughnutOptions = {
                     //Boolean - Whether we should show a stroke on each segment
-                    segmentShowStroke : true,
+                    segmentShowStroke : false,
                     //String - The colour of each segment stroke
-                    segmentStrokeColor : "#fff",
+                    segmentStrokeColor : "#064145",
                     //Number - The width of each segment stroke
-                    segmentStrokeWidth : 2,
+                    segmentStrokeWidth : 1,
                     //Number - The percentage of the chart that we cut out of the middle
-                    percentageInnerCutout : 50, // This is 0 for Pie charts
+                    percentageInnerCutout : 40, // This is 0 for Pie charts
                     //Number - Amount of animation steps
                     animationSteps : 100,
                     //String - Animation easing effect
@@ -31,22 +31,35 @@ define(['modules/graphs/module', 'chartjs'], function (module) {
 
                 var doughnutData = [
                     {
-                        value: 300,
-                        color:"rgba(220,220,220,0.8)",
-                        highlight: "rgba(220,220,220,0.7)",
-                        label: "Grey"
+                        value: 150,
+                        color:"rgba(91,144,191,1)",
+                        highlight: "rgba(91,144,191,0.7)",
+                        label: "Innovation"
                     },
+
                     {
                         value: 50,
-                        color: "rgba(151,187,205,1)",
-                        highlight: "rgba(151,187,205,0.8)",
-                        label: "Blue"
+                        color: "rgba(150,181,180,0.7)",
+                        highlight: "rgba(150,181,180,0.9)",
+                        label: "Client Care"
                     },
                     {
                         value: 100,
-                        color: "rgba(169, 3, 41, 0.7)",
-                        highlight: "rgba(169, 3, 41, 0.7)",
-                        label: "Red"
+                        color:"rgba(163,190,140,1)",
+                        highlight: "rgba(163,190,140,0.7)",
+                        label: "Operational Excelence"
+                    },
+                    {
+                        value: 100,
+                        color: "rgba(171,121,103, 1)",
+                        highlight: "rgba(171, 121, 103, 0.7)",
+                        label: "Integrity"
+                    },
+                    {
+                        value: 100,
+                        color: "rgba(208,135,112, 1)",
+                        highlight: "rgba(208,135,112, 0.7)",
+                        label: "Deliver the difference"
                     }
                 ];
 

@@ -26,6 +26,7 @@ define([
                                 'modules/graphs/directives/inline/easyPieChartContainer',
                                 'modules/graphs/directives/morris/morrisDonutGraph',
                                 'modules/graphs/directives/chartjs/chartjsDoughnutChart',
+                                'modules/graphs/directives/chartjs/chartjsPieChart',
                                 'components/chat/directives/chatWidget',
                                 'components/chat/directives/chatUsers',
                                 'modules/graphs/directives/vectormap/vectorMap',

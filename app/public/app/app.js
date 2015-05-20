@@ -30,6 +30,8 @@ define([
         'app.auth',
         'app.chat',
         'app.dashboard',
+        'app.dashboard1',
+        'app.dashboard2',
         'app.setup',
         'app.layout',
         'app.calendar',
