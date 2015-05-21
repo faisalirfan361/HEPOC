@@ -17,3 +17,65 @@
  * - BODY
  * - CUSTOM STYLES
  */
+
+ .solid-block-head{
+ 	height:340px;
+ 	background-color: #0A8C95;
+ }
+.search-wraper {
+    width: 74%;
+    position: relative;
+    left: 13%;
+    top: 25px;
+    background-color: #82A5AD;
+    padding: 15px 2px;
+    border-radius: 3px;
+}
+#content {
+    padding: 0;
+}
+#ribbon {
+	background-color: #064145;
+	}
+aside {
+  background: linear-gradient(to right, #064145 93%, #064145 100%) repeat scroll 0% 0% transparent;
+}
+.head-text {
+    color: #FFF;
+    text-align: center;
+    padding: 50px 32px;
+}
+.head-text h1{
+	font-size: 60px;
+}
+.head-text h5{
+	margin: 0px;
+}
+span.message-text{
+	line-height: 30px !important;
+}
+#main{
+	min-height: 850px;
+}
+.company-text{
+	margin: 2px;
+	background: grey;
+	min-height: 795px;
+	color: white;
+}
+
+.top-header-profile-content{
+    
+    height: 203px;
+    text-align: center;
+    line-height: 17;
+    border-right: 1px solid white;
+    top: 76px;
+
+}
+.solid-block-head h1.title{
+font-size: 45px;
+padding: 0;
+margin: 0;
+}
+ul.nav-tabs + .tab-content{min-height: 398px;}

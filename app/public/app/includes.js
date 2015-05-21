@@ -35,6 +35,12 @@ define([
     // dashboard
     'dashboard/module',
 
+    // dashboard1
+    'dashboard1/module',
+
+    // dashboard2
+    'dashboard2/module',
+
     // Setup
     'setup/module',
 
