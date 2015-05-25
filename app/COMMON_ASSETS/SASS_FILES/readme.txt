@@ -15,7 +15,7 @@ CREDITS: Alexandre Azevedo <http://github.com/alexndreazevedo>
 2 - Install Compass on Ruby.
     > gem install compass
 
-3 - Copy the folder where config.rb is located to inside of "css" folder of chosen version of SmartAdmin (HTML_version/css, e.g) to install the Sass project.
+3 - Copy the folder where config.rb is located to inside of "css" folder of chosen version of SmartEmployer (HTML_version/css, e.g) to install the Sass project.
 
 4 - Change terminal to folder where the config.rb is located.
     > cd <folder> (Linux or Mac)
@@ -24,7 +24,7 @@ CREDITS: Alexandre Azevedo <http://github.com/alexndreazevedo>
 5 - Run Compass to compile Sass.
     > compass compile
 
-6 - The compiled files will be put in "css" folder of chosen version of SmartAdmin (HTML_version/css, e.g).
+6 - The compiled files will be put in "css" folder of chosen version of SmartEmployer (HTML_version/css, e.g).
 
 7 - For detailed information, please ask for help on terminal.
     > compass -h

@@ -1,5 +1,5 @@
 /*!
- * SmartAdmin's Gruntfile for HTML / AJAX / PHP Versions (there is a different 
+ * SmartEmployer's Gruntfile for HTML / AJAX / PHP Versions (there is a different 
  * grunt file for the angluarJS version, see its related directory)
  * Copyright 2014-2015 MYORANGE INC.
  */
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   	globalConfig: globalConfig,
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * SmartAdmin v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * SmartEmployer v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery\') }\n\n',
