@@ -68,7 +68,7 @@ define(['modules/tables/module', 'jqgrid', 'jqgrid-locale-en'], function (module
                         }
                     },
                     editurl : "dummy.html",
-                    caption : "SmartAdmin jQgrid Skin",
+                    caption : "SmartEmployer jQgrid Skin",
                     multiselect : true,
                     autowidth : true
 

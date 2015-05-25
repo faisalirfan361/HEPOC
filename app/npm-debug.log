@@ -70,7 +70,7 @@
 27 error 404
 27 error 404 'grunt-contrib-expand' is not in the npm registry.
 27 error 404 You should bug the author to publish it
-27 error 404 It was specified as a dependency of 'SmartAdmin'
+27 error 404 It was specified as a dependency of 'SmartEmployer'
 27 error 404
 27 error 404 Note that you can also install from a
 27 error 404 tarball, folder, or http url, or git url.

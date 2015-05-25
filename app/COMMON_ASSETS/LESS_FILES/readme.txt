@@ -25,4 +25,4 @@ Note: enough to set up the php part, no need (at least at this point) for the pe
 
 2) ~your_name/Sites must be the folder where there must be an index.html file, and thus if you go in your browser to http://localhost/~your_name/ it will just pop up nicely the content of index.html
 
-3) Go to SmartAdmin folder you downloaded from wrapbootstrap. Go into the build/ folder and copy its entire content into Sites/. On this way the index.html in the build will be the one what your local server will serve up, and now you can see SmartAdmin dashboard with ajax served from your local server.
+3) Go to SmartEmployer folder you downloaded from wrapbootstrap. Go into the build/ folder and copy its entire content into Sites/. On this way the index.html in the build will be the one what your local server will serve up, and now you can see SmartEmployer dashboard with ajax served from your local server.

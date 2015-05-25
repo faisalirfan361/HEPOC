@@ -1,8 +1,8 @@
 {
-	"name": "SmartAdmin",
+	"name": "SmartEmployer",
 	"version": "1.5.2",
 	"private": true,
-	"description": "SmartAdmin - Responsive Webapp Template",
+	"description": "SmartEmployer - Responsive Webapp Template",
 	"devDependencies": {
 		"grunt": "^0.4.4",
 		"grunt-contrib-uglify": "^0.4.0",

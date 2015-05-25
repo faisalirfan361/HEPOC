@@ -11,7 +11,7 @@
  * JarvisWidget is FULLY owned and LICENSED by MYORANGE INC.
  * This script may NOT be RESOLD or REDISTRUBUTED on its own under any
  * circumstances, and is only to be used with this purchased
- * copy of SmartAdmin Template.
+ * copy of SmartEmployer Template.
  * =======================================================================
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF

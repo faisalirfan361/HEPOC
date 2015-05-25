@@ -16,7 +16,7 @@ define(['angular',
             .state('app.smartAdmin', {
                 abstract: true,
                 data: {
-                    title: 'SmartAdmin Intel'
+                    title: 'SmartEmployer Intel'
                 }
             })
 

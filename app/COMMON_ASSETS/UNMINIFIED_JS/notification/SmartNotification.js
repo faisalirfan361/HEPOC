@@ -1,5 +1,5 @@
 /*
- Copyright 2015 - SmartAdmin Template
+ Copyright 2015 - SmartEmployer Template
  
  This script is a modified version of : MetroNotification
  Plugin name was adjusted with the permission of its author to blend in with the theme
