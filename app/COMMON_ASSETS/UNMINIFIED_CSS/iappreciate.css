@@ -11,7 +11,7 @@
 	width: 16.5%;
 }
 .setupWizard.bootstrapWizard li.active .step, .setupWizard.bootstrapWizard li.active.complete .step{
-	padding: 9px 15px;
+	padding: 11px 15px;
 }
 .setupWizard.bootstrapWizard li.active:before, .setupWizard.bootstrapWizard li.complete:before {
 	border-top: 3px solid #26961E;
@@ -197,4 +197,38 @@ th.profileIcon{
     position: relative;
     left: 150px;
     display: none;
+}
+.smart-style-3 #ribbon {
+  background: #82A5AD;
+  color: #fff;
+}
+.smart-style-3 #ribbon .breadcrumb li:last-child, .smart-style-3 #ribbon .breadcrumb>.active {
+  color: #F1DA91;
+}
+.smart-style-3 #ribbon .breadcrumb, .smart-style-3 #ribbon .breadcrumb a {
+  color: #fff !important;
+}
+/*.smart-style-3 #header {
+  background-color: #0A8C95;
+  background-image: -moz-linear-gradient(top,#82A5AD,#0A8C95);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#82A5AD),to(#0A8C95));
+  background-image: -webkit-linear-gradient(top,#82A5AD,#0A8C95);
+  background-image: -o-linear-gradient(top,#82A5AD,#0A8C95);
+  background-image: linear-gradient(to bottom,#82A5AD,#0A8C95);
+}
+.smart-style-3 #logo-group span#activity, .smart-style-3 .btn-header>:first-child>a {
+  background-color: #82A5AD;
+  background-image: -moz-linear-gradient(top,#82A5AD,#82A5AD);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#b9662b),to(#82A5AD));
+  background-image: -webkit-linear-gradient(top,#82A5AD,#82A5AD);
+  background-image: -o-linear-gradient(top,#82A5AD,#82A5AD);
+  background-image: linear-gradient(to bottom,#82A5AD,#82A5AD);
+  color: #fff!important;
+  border: 1px solid #0A8C95;
+  text-shadow: #985813 0 -1px;
+}*/
+.smart-style-3 .dropdown-menu {
+  border-radius: 0;
+  border-bottom: 2px solid #ADADAD;
+  background: #82A5AD;
 }
