@@ -32,6 +32,8 @@ define([
         'app.dashboard',
         'app.dashboard1',
         'app.dashboard2',
+        'app.dashboard3',
+        'app.dashboard4',
         'app.setup',
         'app.layout',
         'app.calendar',
