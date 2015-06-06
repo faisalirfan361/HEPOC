@@ -6,23 +6,22 @@ define([
 ], function (ng, couchPotato) {
     'use strict';
 
-    var module = ng.module('app.dashboard8', [
+    var module = ng.module('app.dashboard10', [
         'ui.router',
         'ngResource'
     ]);
 
     module.config(function ($stateProvider, $couchPotatoProvider) {
         $stateProvider
-            .state('app.dashboard8', {
-                url: '/dashboard8',
+            .state('app.dashboard10', {
+                url: '/dashboard10',
                 views: {
                     "content@app": {
                         controller: 'DashboardCtrl',
-                        templateUrl: 'app/dashboard8/dashboard.html',
+                        templateUrl: 'app/dashboard10/dashboard.html',
                         resolve: {
                             deps: $couchPotatoProvider.resolveDependencies([
-                                'dashboard8/DashboardCtrl',
-                                'modules/forms/directives/input/smartSelect2',
+                                'dashboard10/DashboardCtrl',
                                 'modules/graphs/directives/inline/sparklineContainer',
                                 'modules/graphs/directives/inline/easyPieChartContainer',
                                 'components/chat/directives/chatWidget',
@@ -34,7 +33,7 @@ define([
                     }
                 },
                 data:{
-                    title: 'Dashboard8'
+                    title: 'Dashboard10'
                 }
             });
     });
@@ -47,5 +46,3 @@ define([
 
     return module;
 });
-
- 
