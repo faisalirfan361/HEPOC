@@ -47,6 +47,27 @@ define([
     // dashboard4
     'dashboard4/module',
 
+    // dashboard5
+    'dashboard5/module',
+
+    // dashboard6
+    'dashboard6/module',
+
+     // dashboard7
+    'dashboard7/module',
+
+     // dashboard8
+    'dashboard8/module',
+
+    // dashboard9
+    'dashboard9/module',
+
+    // dashboard10
+    'dashboard10/module',
+
+    // dashboard11
+    'dashboard11/module',
+
     // Setup
     'setup/module',
 

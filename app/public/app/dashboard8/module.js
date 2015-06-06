@@ -48,11 +48,4 @@ define([
     return module;
 });
 
-
-    $(document).on("click", ".ch-info", function() {
-        if(!$(this).hasClass("ch-item-click")){
-            $(this).addClass("ch-item-click");
-        }else{
-            $(this).removeClass("ch-item-click");
-        }
-    });
+ 
