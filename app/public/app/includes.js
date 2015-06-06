@@ -40,6 +40,12 @@ define([
 
     // dashboard2
     'dashboard2/module',
+    
+    // dashboard3
+    'dashboard3/module',
+
+    // dashboard4
+    'dashboard4/module',
 
     // Setup
     'setup/module',

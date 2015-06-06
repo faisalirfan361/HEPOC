@@ -79,3 +79,13 @@ padding: 0;
 margin: 0;
 }
 ul.nav-tabs + .tab-content{min-height: 398px;}
+/*.td-text-formate{
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    font-weight: 300;
+    color: black;
+}*/
+#points_table td{
+     font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    font-weight: 300;
+    color: black;
+}

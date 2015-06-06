@@ -339,3 +339,4 @@ define("dndTree", ["d3js","jquery"], function(){});
 define("contextMenu", ["jquery"], function(){});
 
 window.name="NG_DEFER_BOOTSTRAP!",define('main',["require","jquery","angular","domReady","bootstrap","appConfig","app","includes","d3js","dndTree","contextMenu"],function(a,b,c,d){b.sound_path=appConfig.sound_path,b.sound_on=appConfig.sound_on,d(function(a){c.bootstrap(a,["app"]),c.resumeBootstrap()})});
+
